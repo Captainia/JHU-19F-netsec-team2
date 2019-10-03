@@ -2,7 +2,7 @@ import asyncio
 import playground
 import time
 import sys
-from cmdHandler_E8 import ServerCmdHandler, printx
+from cmdHandler import ServerCmdHandler, printx
 # from playground.common.logging import EnablePresetLogging, PRESET_VERBOSE
 # EnablePresetLogging(PRESET_VERBOSE)
 
@@ -12,7 +12,7 @@ PORT_NUM = 1107
 class ServerProtocol(asyncio.Protocol):
     def connection_made(self, transport):
         printx('Connection made')
-        self.transport = transport  # NOTE: why this line have to exist?
+        self.transport = transport  
         self.cmdHandler = ServerCmdHandler(transport)
 
         # NOTE:py3.7
@@ -31,7 +31,7 @@ class ServerProtocol(asyncio.Protocol):
 def main(args):
     loop = asyncio.get_event_loop()
     coro = playground.create_server(
-        ServerProtocol, "localhost", PORT_NUM)  # for E5
+        ServerProtocol, "localhost", PORT_NUM)  
     server = loop.run_until_complete(coro)
 
     printx('Servering on{}'.format(server.sockets[0].getsockname()))

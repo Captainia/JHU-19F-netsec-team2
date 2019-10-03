@@ -3,7 +3,7 @@ import playground
 import sys
 
 from autograder_ex8_packets import *
-from cmdHandler_E8 import ClientCmdHandler, printx
+from cmdHandler import ClientCmdHandler, printx
 from class_packet import *
 # from playground.common.logging import EnablePresetLogging, PRESET_DEBUG
 # EnablePresetLogging(PRESET_DEBUG)
@@ -18,8 +18,6 @@ def getFirstPkt():
     return pkt
 
 # TODO: add testid
-
-
 def getCheckResPkt():
     return AutogradeResultRequest(test_id="07a2fccd724a998b1c59f11879da5f0047a25e28ad536e5c1ad0bb8e45078526")
 

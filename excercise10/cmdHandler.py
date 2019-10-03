@@ -1,17 +1,18 @@
 import sys
-sys.path.insert(1, '../../BitPoints-Bank-Playground3/src/')
+sys.path.insert(1, '../BitPoints-Bank-Playground3/src/')
 import getpass
 import playground
 from OnlineBank import BankClientProtocol, OnlineBankConfig
 from CipherUtil import loadCertFromFile
-from escape_room_006 import EscapeRoomGame
-from autograder_ex8_packets import *
-from class_packet import *
 from playground.network.packet import PacketType
 import os
 import time
 import asyncio
-# from Packets_E7 import *
+
+# NOTE: local pkts and files
+from escape_room_010 import EscapeRoomGame # from escape_room_006 import EscapeRoomGame 
+from autograder_ex8_packets import * 
+from class_packet import *
 
 
 E6_STRS = ["look mirror",
@@ -26,15 +27,15 @@ E6_STRS = ["look mirror",
            "open door"]
 
 # bank params
-UNAME = "xma39"
-PASS = ""
-TEST_UNAME = "test"  # TODO:make sure of this
+BANK_CERT_FILE_NAME = "20194_online_bank.cert"
+MY_UNAME = "xma39"
 MY_ACCOUNT = "xma39_account"
 AMOUNT = 10
+TEST_UNAME = "test"  # TODO:make sure of this
+
 # for formatting print
 FL = 7
 SL = 20
-
 
 def printx(string):
     print(string.center(80, '-')+'\n')
@@ -52,7 +53,7 @@ class BankManager:
         # bank_stack = bankconfig.get_parameter("CLIENT", "stack", "default")
         self.bank_username = bankconfig.get_parameter("CLIENT", "username")
         self.certPath = os.path.join(
-            bankconfig.path(), "20194_online_bank.cert")
+            bankconfig.path(), BANK_CERT_FILE_NAME)
         self.bank_cert = loadCertFromFile(self.certPath)
         self.bank_client = None
 
@@ -170,7 +171,7 @@ class ClientCmdHandler:
         if self.cmd_num + 1 > len(E6_STRS):
             return
         self.dataHandler.sendPkt(GameCommandPacket(
-            command=E6_STRS[self.cmd_num]))  # BUG
+            command=E6_STRS[self.cmd_num]))  
         self.cmd_num += 1
 
 
@@ -211,7 +212,6 @@ class ServerCmdHandler:
         elif pktID == GameCommandPacket.DEFINITION_IDENTIFIER:
             if self.payStatus:
                 self.game.command(pkt.command)
-                # BUG
                 time.sleep(0.25)
             else:
                 printError(
@@ -221,7 +221,7 @@ class ServerCmdHandler:
             printx("unknown pkt:" + pktID)
 
     def sendGamePaymentRequestPkt(self):
-        pkt = create_game_require_pay_packet(UNAME, MY_ACCOUNT, AMOUNT)
+        pkt = create_game_require_pay_packet(MY_UNAME, MY_ACCOUNT, AMOUNT)
         self.dataHandler.sendPkt(pkt)
 
     def checkPayment(self, receipt, receipt_sig):
