@@ -260,25 +260,7 @@ class EscapeRoomCommandHandler:
                 self.player["container"][object.name] = object
                 self._run_triggers(object, "get",container)
         self.output(get_result)
-#@
-    def _cmd_push(self, push_args):
 
-        if len(push_args) == 0:
-            return self.output("Push what?")
-        object = self.room["container"].get(push_args[-1], None)
-        
-        success_result = "You push the {}.".format(push_args[-1])
-        push_result = (
-            ((not object or not object["visible"]) and "You don't see that.") or
-            ((not object["pushable"])              and "You can't open that!") or
-                                                       success_result)
-        if push_result == success_result:
-            #startTrap(object["trap"],self.output,self.isintrap)
-            object["pushable"] = False
-            self.isintrap =True
-            self._run_triggers(object, "push")
-        #self.output(open_result)
-#@
     def _cmd_hit(self, hit_args):
         if not hit_args:
             return self.output("What do you want to hit?")
@@ -327,10 +309,15 @@ class EscapeRoomCommandHandler:
         if not target["pressable"]:
             return self.output("You can't press that!")
         else:
-            self.output("You press the {}".format(target_name))
+            if traget_name == "redbutton":
+                self.output("You press the {}".format(target_name))
+                
+            elif traget_name == "bluebutton":#@
+                target["pressable"] = False
+                self.isintrap =True#@
             self._run_triggers(target, "press")
         
-        
+
     def _cmd_inventory(self, inventory_args):
         """
         Use return statements to end function early
@@ -367,7 +354,7 @@ def create_room_description(room):
     room_data = {
         "mirror": room["container"]["mirror"].name,
         "clock_time": room["container"]["clock"]["time"],
-        "interesting":"There are a bluebutton on the wall that if you could push it and a redbutton on the floor that you could press it."#@
+        "interesting":"There are a bluebutton on the wall and a redbutton on the floor that seems pressable."#@
     }
     for item in room["container"].values():
         if item["interesting"]:
@@ -489,7 +476,7 @@ class EscapeRoomGame:
         hammer = EscapeRoomObject("hammer", visible=True, gettable=True)
         redbutton = EscapeRoomObject("redbutton", visible=True, interesting=True, pressable=True)#tiger
         flyingkey = EscapeRoomObject("flyingkey", visible=True, flying=True, hittable=False, smashers=[hammer], interesting=True, location="ceiling")
-        bluebutton = EscapeRoomObject("bluebutton", visible=True, pushable=True,trap = self.trap)#@ trap in here
+        bluebutton = EscapeRoomObject("bluebutton", visible=True, pressable=True,trap = self.trap)#@ trap in here
         
         # setup containers
         player["container"]= {}
@@ -520,7 +507,7 @@ class EscapeRoomGame:
         chest.triggers.append(lambda obj, cmd, *args: (cmd == "open") and chest.__setitem__("open",True))
         chest.triggers.append(lambda obj, cmd, *args: (cmd == "open") and chest.__setitem__("description", create_chest_description(chest, room)))
         chest.triggers.append(lambda obj, cmd, *args: (cmd == "look") and chest.__setitem__("description", create_chest_description(chest, room)))
-        bluebutton.triggers.append(lambda obj, cmd, *args: (cmd == "push") and self.startTrap())#@
+        bluebutton.triggers.append(lambda obj, cmd, *args: (cmd == "press") and self.startTrap())#@
         redbutton.triggers.append((lambda obj, cmd, *args: (cmd == "press") and redbutton_trigger(clock, door, self.output)))
 
         
