@@ -367,7 +367,7 @@ def create_room_description(room):
     room_data = {
         "mirror": room["container"]["mirror"].name,
         "clock_time": room["container"]["clock"]["time"],
-        "interesting":"There is a button on the wall that seems pushable"#@
+        "interesting":"There are a bluebutton on the wall that if you could push it and a redbutton on the floor that you could press it."#@
     }
     for item in room["container"].values():
         if item["interesting"]:
