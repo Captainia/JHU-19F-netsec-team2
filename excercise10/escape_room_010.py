@@ -180,6 +180,18 @@ class EscapeRoomCommandHandler:
             
             self._run_triggers(self.room, "_code_wrong_")
             
+            
+    def _cmd_press(self, press_args):
+        if not press_args:
+            return self.output("What do you want to press?")
+        target_name = press_args[0]
+        target = self.room["container"].get(target_name, None)
+        if not target["pressable"]:
+            return self.output("You can't press that!")
+        else:
+            self.output("You press the {}".format(target_name))
+            self._run_triggers(target, "press")
+        
         
     def _cmd_inventory(self, inventory_args):
         """
@@ -264,8 +276,8 @@ def create_flyingkey_short_description(flyingkey):
     
 def advance_time(room, clock):
     event = None
-    clock["time"] = clock["time"] - 1
-    if clock["time"] == 0:
+    clock["time"] = clock["time"] - clock["time_decr"]
+    if clock["time"] <= 0:
         for object in room["container"].values():
             if object["alive"]:
                 object["alive"] = False
@@ -296,6 +308,21 @@ def flyingkey_hit_trigger(room, flyingkey, key, output):
         room["container"][key.name] = key
         output("The flying key falls off the wall. When it hits the ground, it's wings break off and you now see an ordinary key.")
         
+        
+def redbutton_trigger(clock, door, output):
+    if clock["time_decr"] == 1:
+        clock["time_decr"] += 1
+        output("The time on the clock decreases faster.")
+    elif clock["time_decr"] == 2:
+        clock["time_decr"] += 3
+        output("The time on the clock decreases even faster.")
+    elif clock["time_decr"] == 5:
+        clock["time_decr"] += 7
+        output("The time on the clock decreases fast af now.")
+        door["locked"] = False
+        output("You hear a lock click.")
+        
+        
 def short_description(object):
     if not object["short_description"]: return "a "+object.name
     return object["short_description"]
@@ -310,7 +337,7 @@ class EscapeRoomGame:
         self.status = "void"
         
     def create_game(self, cheat=False):
-        clock =  EscapeRoomObject("clock",  visible=True, time=100)
+        clock =  EscapeRoomObject("clock",  visible=True, time=100, time_decr=1)
         codedlock = EscapeRoomObject('codedlock', visible=True, chance=5) #Define coded lock on the chest
         mirror = EscapeRoomObject("mirror", visible=True)
         hairpin= EscapeRoomObject("hairpin",visible=False, gettable=True)
@@ -320,12 +347,13 @@ class EscapeRoomGame:
         room   = EscapeRoomObject("room",   visible=True)
         player = EscapeRoomObject("player", visible=False, alive=True)
         hammer = EscapeRoomObject("hammer", visible=True, gettable=True)
+        redbutton = EscapeRoomObject("redbutton", visible=True, interesting=True, pressable=True)
         flyingkey = EscapeRoomObject("flyingkey", visible=True, flying=True, hittable=False, smashers=[hammer], interesting=True, location="ceiling")
         
         # setup containers
         player["container"]= {}
         chest["container"] = create_container_contents(hammer)
-        room["container"]  = create_container_contents(codedlock, player, door, clock, mirror, hairpin, chest, flyingkey)
+        room["container"]  = create_container_contents(codedlock, player, door, clock, mirror, hairpin, chest, flyingkey, redbutton)
         
         # set initial descriptions (functions)
         door["description"]    = create_door_description(door)
@@ -350,7 +378,7 @@ class EscapeRoomGame:
         chest.triggers.append(lambda obj, cmd, *args: (cmd == "open") and chest.__setitem__("open",True))
         chest.triggers.append(lambda obj, cmd, *args: (cmd == "open") and chest.__setitem__("description", create_chest_description(chest, room)))
         chest.triggers.append(lambda obj, cmd, *args: (cmd == "look") and chest.__setitem__("description", create_chest_description(chest, room)))
-        
+        redbutton.triggers.append((lambda obj, cmd, *args: (cmd == "press") and redbutton_trigger(clock, door, self.output)))
         
         # TODO, the chest needs some triggers. This is for a later exercise
         
