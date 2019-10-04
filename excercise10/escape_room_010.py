@@ -10,7 +10,127 @@ def create_container_contents(*escape_room_objects):
 def listFormat(object_list):
     l = ["a "+object.name for object in object_list if object["visible"]]
     return ", ".join(l)
+#@
+class Trap: 
+    def __init__(self, output):
+        self.output = output
+    def initialTrap(self,output):
+        self.TRAP = 0
+        self.ROAD = 1
+        self.PEOPLE = 2
+        self.EXIT = 3
+        self.DEAD = 10
+        self.LIVE = 11
+        self.ESCAPED = 12
+        self.maplist=[[0,0,0],
+                      [0,0,0],
+                      [0,0,0]]
+        self.playerPosition = [random.choice([r for r in range(2)]),random.choice([c for c in range(3)])]
+        self.exitPosition =[2,1]
+        self.playerStatus = self.LIVE
+        self.output = output
+        
+        
+    def changeMap(self):
+        self.generateMap()
+        return self.drawMap()
 
+    def getmap(self):
+        return self.maplist
+    
+
+    def generateMap(self):
+        for r in range(3):
+            for c in range(3):
+                if r == self.playerPosition[0] and c == self.playerPosition[1]:
+                    self.maplist[r][c] = self.PEOPLE
+                #self.maplist[r][c] != self.PEOPLE and self.maplist[r][c] != self.EXIT:
+                elif r == self.exitPosition[0] and c == self.exitPosition[1]:
+                    self.maplist[r][c] = self.EXIT
+                else:
+                    self.maplist[r][c] =  random.choice([self.TRAP,self.ROAD])
+
+    
+
+    def roomContent(self,content):
+        if content == self.TRAP:
+            return "X"
+        elif content == self.PEOPLE:
+            return "*"
+        elif content == self.EXIT:
+            return "@"
+        else:
+            return " "
+        
+    def drawMap(self):
+        trapmap = "You are in trap room. If you want to go back, you need to move to EXIT.If you go into TRAP, you will die.\n"
+        trapmap += "YOU--*  EXIT--@ TRAP--X\n"
+        trapmap += "MOVE INPUT: up, down, left, right, wait.\n"
+        trapmap += '-----------\n'
+        trapmap +=' '+ self.roomContent(self.maplist[0][0]) + ' | ' + self.roomContent(self.maplist[0][1])+ ' | ' + self.roomContent(self.maplist[0][2])+"\n"
+        trapmap += '-----------\n'
+        trapmap +=' '+ self.roomContent(self.maplist[1][0]) + ' | ' + self.roomContent(self.maplist[1][1])+ ' | ' + self.roomContent(self.maplist[1][2])+"\n"
+        trapmap += '-----------\n'
+        trapmap +=' '+ self.roomContent(self.maplist[2][0]) + ' | ' + self.roomContent(self.maplist[2][1])+ ' | ' + self.roomContent(self.maplist[2][2])+"\n"
+        trapmap += '-----------\n'
+        return trapmap
+    
+    def isEscape(self):
+        if self.playerPosition[0] == self.exitPosition[0] and self.playerPosition[1] == self.exitPosition[1]:
+            self.playerStatus = self.ESCAPED
+        elif self.maplist[self.playerPosition[0]][self.playerPosition[1]] == self.TRAP:
+            self.playerStatus = self.DEAD
+        else:
+            pass
+    def commandHandler(self,command):
+        if command == "up":
+            #print(command)
+            nextY = self.playerPosition[0] -1
+            if nextY >= 0 and nextY <= 2:
+                self.maplist[self.playerPosition[0]][self.playerPosition[1]] = self.ROAD
+                self.playerPosition[0] = nextY
+            else:
+                self.output("Can't go that way")
+                
+        elif command == "down":
+            #print(command)
+            nextY = self.playerPosition[0] + 1
+            if nextY >= 0 and nextY <= 2:
+                self.maplist[self.playerPosition[0]][self.playerPosition[1]] = self.ROAD
+                self.playerPosition[0] = nextY
+
+            else:
+                self.output("Can't go that way")
+                
+        elif command == "left":
+            #print(command)
+            nextX = self.playerPosition[1] -1
+            if nextX >= 0 and nextX <= 2:
+                self.maplist[self.playerPosition[0]][self.playerPosition[1]] = self.ROAD
+                self.playerPosition[1] = nextX
+            else:
+                self.output("Can't go that way")
+                
+        elif command == "right":
+            #print(command)
+            nextX = self.playerPosition[1] +1
+            if nextX >= 0 and nextX <= 2:
+                self.maplist[self.playerPosition[0]][self.playerPosition[1]] = self.ROAD
+                self.playerPosition[1] = nextX
+            else:
+                self.output("Can't go that way")
+                
+        elif command == "wait":
+            self.output("Waiting")
+        else:
+            self.output("what to do?")
+        self.isEscape()
+        self.output(self.changeMap())
+        
+    #def output(self,string0):
+     #   print(string0)
+#@
+     
 class EscapeRoomObject:
     def __init__(self, name, **attributes):
         self.name = name
@@ -140,7 +260,7 @@ class EscapeRoomCommandHandler:
                 self.player["container"][object.name] = object
                 self._run_triggers(object, "get",container)
         self.output(get_result)
-        
+
     def _cmd_hit(self, hit_args):
         if not hit_args:
             return self.output("What do you want to hit?")
@@ -180,7 +300,24 @@ class EscapeRoomCommandHandler:
             
             self._run_triggers(self.room, "_code_wrong_")
             
+            
+    def _cmd_press(self, press_args):
+        if not press_args:
+            return self.output("What do you want to press?")
+        target_name = press_args[0]
+        target = self.room["container"].get(target_name, None)
+        if not target["pressable"]:
+            return self.output("You can't press that!")
+        else:
+            if target_name == "redbutton":
+                self.output("You press the {}".format(target_name))
+                
+            elif target_name == "bluebutton":#@
+                target["pressable"] = False
+                self.isintrap =True#@
+            self._run_triggers(target, "press")
         
+
     def _cmd_inventory(self, inventory_args):
         """
         Use return statements to end function early
@@ -217,7 +354,7 @@ def create_room_description(room):
     room_data = {
         "mirror": room["container"]["mirror"].name,
         "clock_time": room["container"]["clock"]["time"],
-        "interesting":""
+        "interesting":"There are a bluebutton on the wall and a redbutton on the floor that seems pressable."#@
     }
     for item in room["container"].values():
         if item["interesting"]:
@@ -292,8 +429,8 @@ def create_flyingkey_short_description(flyingkey):
     
 def advance_time(room, clock):
     event = None
-    clock["time"] = clock["time"] - 1
-    if clock["time"] == 0:
+    clock["time"] = clock["time"] - clock["time_decr"]
+    if clock["time"] <= 0:
         for object in room["container"].values():
             if object["alive"]:
                 object["alive"] = False
@@ -324,6 +461,21 @@ def flyingkey_hit_trigger(room, flyingkey, key, output):
         room["container"][key.name] = key
         output("The flying key falls off the wall. When it hits the ground, it's wings break off and you now see an ordinary key.")
         
+        
+def redbutton_trigger(clock, door, output):
+    if clock["time_decr"] == 1:
+        clock["time_decr"] += 1
+        output("The time on the clock decreases faster.")
+    elif clock["time_decr"] == 2:
+        clock["time_decr"] += 3
+        output("The time on the clock decreases even faster.")
+    elif clock["time_decr"] == 5:
+        clock["time_decr"] += 7
+        output("The time on the clock decreases fast af now.")
+        door["locked"] = False
+        output("You hear a lock click.")
+        
+        
 def short_description(object):
     if not object["short_description"]: return "a "+object.name
     return object["short_description"]
@@ -336,9 +488,11 @@ class EscapeRoomGame:
         self.command_handler = None
         self.agents = []
         self.status = "void"
+        self.trap = Trap(self.output)#@
+        self.isintrap = False#@
         
     def create_game(self, cheat=False):
-        clock =  EscapeRoomObject("clock",  visible=True, time=100)
+        clock =  EscapeRoomObject("clock",  visible=True, time=100, time_decr=1)
         codedlock = EscapeRoomObject('codedlock', visible=True, chance=5) #Define coded lock on the chest
         mirror = EscapeRoomObject("mirror", visible=True, level=-1, read_wait = 0) #(Re)defined mirror in the room
         key    = EscapeRoomObject("key",    visible=True, gettable=True, interesting=True)
@@ -347,12 +501,15 @@ class EscapeRoomGame:
         room   = EscapeRoomObject("room",   visible=True)
         player = EscapeRoomObject("player", visible=False, alive=True)
         hammer = EscapeRoomObject("hammer", visible=True, gettable=True)
+        redbutton = EscapeRoomObject("redbutton", visible=True, interesting=True, pressable=True)#tiger
         flyingkey = EscapeRoomObject("flyingkey", visible=True, flying=True, hittable=False, smashers=[hammer], interesting=True, location="ceiling")
+        bluebutton = EscapeRoomObject("bluebutton", visible=True, pressable=True,trap = self.trap)#@ trap in here
         
         # setup containers
         player["container"]= {}
         chest["container"] = create_container_contents(hammer)
-        room["container"]  = create_container_contents(codedlock, player, door, clock, mirror, chest, flyingkey)
+        room["container"]  = create_container_contents(codedlock, player, door, clock, mirror, chest, flyingkey, redbutton,bluebutton)#@
+
         
         # set initial descriptions (functions)
         door["description"]    = create_door_description(door)
@@ -376,7 +533,9 @@ class EscapeRoomGame:
         chest.triggers.append(lambda obj, cmd, *args: (cmd == "open") and chest.__setitem__("open",True))
         chest.triggers.append(lambda obj, cmd, *args: (cmd == "open") and chest.__setitem__("description", create_chest_description(chest, room)))
         chest.triggers.append(lambda obj, cmd, *args: (cmd == "look") and chest.__setitem__("description", create_chest_description(chest, room)))
-        
+        bluebutton.triggers.append(lambda obj, cmd, *args: (cmd == "press") and self.startTrap())#@
+        redbutton.triggers.append((lambda obj, cmd, *args: (cmd == "press") and redbutton_trigger(clock, door, self.output)))
+
         
         # TODO, the chest needs some triggers. This is for a later exercise
         
@@ -430,7 +589,13 @@ class EscapeRoomGame:
     def start(self):
         self.status = "playing"
         self.output("Where are you? You don't know how you got here... Were you kidnapped? Better take a look around")
+    #@
+    def startTrap(self):
+        self.isintrap = True
+        self.trap.initialTrap(self.output)
+        self.output(self.trap.changeMap())
         
+    #@       
     def command(self, command_string):
         if self.status == "void":
             self.output("The world doesn't exist yet!")
@@ -441,13 +606,24 @@ class EscapeRoomGame:
         elif self.status == "escaped":
             self.output("You already escaped! The game is over!")
         else:
-            self.command_handler.command(command_string)
-            if not self.player["alive"]:
-                self.output("You died. Game over!")
-                self.status = "dead"
-            elif self.player.name not in self.room["container"]:
-                self.status = "escaped"
-                self.output("VICTORY! You escaped!")
+            if self.isintrap == True:#@
+                if self.trap.playerStatus == self.trap.ESCAPED:
+                    self.output('escaped from the trap!')
+                    self.isintrap = False
+                elif self.trap.playerStatus == self.trap.DEAD:
+                    self.output('you die in the trap!')
+                    self.isintrap = False
+                    self.status = "dead"
+                else:
+                    self.trap.commandHandler(command_string)
+            else:
+                self.command_handler.command(command_string)
+                if not self.player["alive"]:
+                    self.output("You died. Game over!")
+                    self.status = "dead"
+                elif self.player.name not in self.room["container"]:
+                    self.status = "escaped"
+                    self.output("VICTORY! You escaped!")#@
                 
 def game_next_input(game):
     input = sys.stdin.readline().strip()
