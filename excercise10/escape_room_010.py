@@ -372,7 +372,7 @@ def create_door_description(door):
     if door["locked"]: description += " The door is locked."
     return description
     
-def create_mirror_description(mirror, room):
+def create_mirror_description(mirror, room): #William
     if mirror["level"] <= 0:
         description = """You see something carved on the bottom edge of the mirror: 
 Looking into the mirror is the prerogative of the foolish."""
@@ -494,7 +494,7 @@ class EscapeRoomGame:
     def create_game(self, cheat=False):
         clock =  EscapeRoomObject("clock",  visible=True, time=100, time_decr=1)
         codedlock = EscapeRoomObject('codedlock', visible=True, chance=5) #Define coded lock on the chest
-        mirror = EscapeRoomObject("mirror", visible=True, level=-1, read_wait = 0) #(Re)defined mirror in the room
+        mirror = EscapeRoomObject("mirror", visible=True, level=-1, read_wait = 0) #(Re)defined mirror in the room WILLIAM
         key    = EscapeRoomObject("key",    visible=True, gettable=True, interesting=True)
         door  =  EscapeRoomObject("door",   visible=True, openable=True, open=False, keyed=True, locked=True, unlockers=[key])
         chest  = EscapeRoomObject("chest",  visible=True, openable=True, open=False, keyed=True, locked=True, unlockers=[])
@@ -563,7 +563,7 @@ class EscapeRoomGame:
                 self.output(event)
             await asyncio.sleep(5)
 
-    async def madness_agent(self, mirror):
+    async def madness_agent(self, mirror):#William
         await asyncio.sleep(5) # sleep before starting the while loop
         while self.status == "playing":
             if mirror["level"] <= 1:
