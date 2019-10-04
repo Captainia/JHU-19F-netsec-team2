@@ -236,9 +236,37 @@ def create_door_description(door):
     return description
     
 def create_mirror_description(mirror, room):
-    description = "You look in the mirror and see yourself."
-    if "hairpin" in room["container"]:
-        description += ".. wait, there's a hairpin in your hair. Where did that come from?"
+    if mirror["level"] <= 0:
+        description = """You see something carved on the bottom edge of the mirror: 
+Looking into the mirror is the prerogative of the foolish."""
+        mirror["level"] += 1
+        return description
+    if mirror["level"] == 1:
+        description = """Stricken with curiocity, you decides to look into the mirror despite the warning.
+In the mirror, you see yourself unlocking the door with a small object.
+In the back of your head, you wish to look into the mirror more... """
+    elif mirror["level"] == 2:
+        description = """You look into the mirror again.
+Your reflection is noticibaly brighter, as if shinning in radiant sunlight.
+In the mirror, you see yourself smashing something on the wall with a hammer.
+As you turn away, you have a strong urge to look into the mirror for just a bit more..."""
+    elif mirror["level"] == 3:
+        description = """You look into the mirror yet again. Your reflection is now beaming with light, as if you were a lamp.
+Despite the discomfort to your eyes, you stare at it for a bit longer.
+In the mirror, you see yourself checking the time.
+With great difficulty, you finally turn away.
+Your mind is now consumed with a desire to look into the mirror again."""
+    elif mirror["level"] == 4:
+        description = """You look into the mirror, for one last time.
+Your reflection is now a being made of pure sun light, and your eyes burn as you stare.
+Visions of the sun slowly fill your eyes, and not long after, you can see no more.
+You let out a scream. Everything fades to black.
+You turn away from the mirror. Or maybe you didn't, you don't care much now. You yearn for THE SUN. THE SUN. THE SUN."""
+        for object in room["container"].values():
+            if object["visible"]:
+                object["visible"] = False
+    mirror["level"] += 1
+    mirror["read_wait"] += 1
     return description
     
 def create_chest_description(chest, room):
@@ -312,8 +340,7 @@ class EscapeRoomGame:
     def create_game(self, cheat=False):
         clock =  EscapeRoomObject("clock",  visible=True, time=100)
         codedlock = EscapeRoomObject('codedlock', visible=True, chance=5) #Define coded lock on the chest
-        mirror = EscapeRoomObject("mirror", visible=True)
-        hairpin= EscapeRoomObject("hairpin",visible=False, gettable=True)
+        mirror = EscapeRoomObject("mirror", visible=True, level=-1, read_wait = 0) #(Re)defined mirror in the room
         key    = EscapeRoomObject("key",    visible=True, gettable=True, interesting=True)
         door  =  EscapeRoomObject("door",   visible=True, openable=True, open=False, keyed=True, locked=True, unlockers=[key])
         chest  = EscapeRoomObject("chest",  visible=True, openable=True, open=False, keyed=True, locked=True, unlockers=[])
@@ -325,7 +352,7 @@ class EscapeRoomGame:
         # setup containers
         player["container"]= {}
         chest["container"] = create_container_contents(hammer)
-        room["container"]  = create_container_contents(codedlock, player, door, clock, mirror, hairpin, chest, flyingkey)
+        room["container"]  = create_container_contents(codedlock, player, door, clock, mirror, chest, flyingkey)
         
         # set initial descriptions (functions)
         door["description"]    = create_door_description(door)
@@ -338,7 +365,6 @@ class EscapeRoomGame:
         # the room's description depends on other objects. so do it last
         room["description"]    = create_room_description(room)
 
-        mirror.triggers.append(lambda obj, cmd, *args: (cmd == "look") and hairpin.__setitem__("visible",True))
         mirror.triggers.append(lambda obj, cmd, *args: (cmd == "look") and mirror.__setitem__("description", create_mirror_description(mirror, room)))
         door.triggers.append(lambda obj, cmd, *args: (cmd == "unlock") and door.__setitem__("description", create_door_description(door)))
         door.triggers.append(lambda obj, cmd, *args: (cmd == "open") and room["container"].__delitem__(player.name))
@@ -357,6 +383,7 @@ class EscapeRoomGame:
         self.room, self.player = room, player
         self.command_handler = self.command_handler_class(room, player, self.output)
         self.agents.append(self.flyingkey_agent(flyingkey))
+        self.agents.append(self.madness_agent(mirror))
         self.status = "created"
         
     async def flyingkey_agent(self, flyingkey):
@@ -376,6 +403,29 @@ class EscapeRoomGame:
             for event in self.room.do_trigger("_post_command_"):
                 self.output(event)
             await asyncio.sleep(5)
+
+    async def madness_agent(self, mirror):
+        await asyncio.sleep(5) # sleep before starting the while loop
+        while self.status == "playing":
+            if mirror["level"] <= 1:
+                await asyncio.sleep(5) # check every 5 second
+                continue
+            while mirror["read_wait"] != 0:
+                await asyncio.sleep(5) # additional sleep time before printing look message
+                mirror["read_wait"] -= 1
+            if mirror["level"] == 2:
+                self.output("You want to look at the mirror again.")
+            elif mirror["level"] == 3:
+                self.output("You wish to look at the mirror again.")
+            elif mirror["level"] == 4:
+                self.output("You yearn to look at the mirror again.")
+            elif mirror["level"] == 5:
+                self.output("THE SUN. THE SUN. THE SUN.")
+            for event in self.room.do_trigger("_post_command_"):
+                self.output(event)
+            sleep_time = 15 - (mirror["level"]-1)*3
+            await asyncio.sleep(sleep_time) # additional sleep time before printing look message
+            
     
     def start(self):
         self.status = "playing"
