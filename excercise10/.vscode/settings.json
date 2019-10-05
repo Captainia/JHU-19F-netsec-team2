@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/home/student_20194/Xiangjun/JHU-19F-NetworkSecurity/venvs/py37_netsec_env/bin/python"
+    "python.pythonPath": "/home/student_20194/Envs/py37_netsec_env/bin/python",
+    "python.formatting.provider": "autopep8"
 }

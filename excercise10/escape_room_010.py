@@ -618,12 +618,12 @@ class EscapeRoomGame:
                     self.trap.commandHandler(command_string)
             else:
                 self.command_handler.command(command_string)
-                if not self.player["alive"]:
-                    self.output("You died. Game over!")
-                    self.status = "dead"
-                elif self.player.name not in self.room["container"]:
-                    self.status = "escaped"
-                    self.output("VICTORY! You escaped!")#@
+            if not self.player["alive"]:
+                self.output("You died. Game over!")
+                self.status = "dead"
+            elif self.player.name not in self.room["container"]:
+                self.status = "escaped"
+                self.output("VICTORY! You escaped!")#@
                 
 def game_next_input(game):
     input = sys.stdin.readline().strip()

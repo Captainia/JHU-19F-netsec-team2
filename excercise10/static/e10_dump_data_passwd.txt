@@ -1,0 +1,1289 @@
+apps.bank.OpenSession
+       ClientNonce         1053791264802184555
+apps.bank.OpenSession
+       Login               xma39
+apps.bank.OpenSession
+       PasswordHash        b'c\xbdb\xd7\xfcY\xdd*\x9du&\xc8G\x1cR\xc4\xe9\xcc\xfc^\x04,\xd1\xe7%\x100\xac\x15G0\xa7'
+
+
+apps.bank.LoginFailure
+       ClientNonce         1053791264802184555
+apps.bank.LoginFailure
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         13782423154288833412
+apps.bank.OpenSession
+       Login               jlee697
+apps.bank.OpenSession
+       PasswordHash        b'`]S3\xd0Rg\xc0e\xdd\x13>\x92\xe0\x9d\x0e~\x9c\x02tg\xefp\x85C\x04\xf8Y\x825U+'
+
+
+apps.bank.OpenSession
+       ClientNonce         7475957766822573964
+apps.bank.OpenSession
+       Login               xma39
+apps.bank.OpenSession
+       PasswordHash        b'\xef}\x1c\xa0\xd4\x89\xcc\xb6\\\xc3\xc5\xb1\xcd\xa1\xc7k@\x8du\xf4\xc3\x14\x9a6u\xebC\xf9\xa2[1Y'
+
+
+apps.bank.SessionOpen
+       ClientNonce         7475957766822573964
+apps.bank.SessionOpen
+       ServerNonce         14886765694420883002
+apps.bank.SessionOpen
+       Account             
+
+
+apps.bank.Close
+       ClientNonce         7475957766822573964
+apps.bank.Close
+       ServerNonce         14886765694420883002
+
+
+apps.bank.OpenSession
+       ClientNonce         581453231341692639
+apps.bank.OpenSession
+       Login               wyang47
+apps.bank.OpenSession
+       PasswordHash        b'\x89\xc65X\xe5\xf5z5m_/\xcdC\xf4\x06X"\xff(R\xe4n\x15\xf4M)b\x06\xaa\x8boE'
+
+
+apps.bank.SessionOpen
+       ClientNonce         581453231341692639
+apps.bank.SessionOpen
+       ServerNonce         6738509111210321610
+apps.bank.SessionOpen
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         581453231341692639
+apps.bank.SwitchAccount
+       ServerNonce         6738509111210321610
+apps.bank.SwitchAccount
+       RequestId           17557509080796156451
+apps.bank.SwitchAccount
+       Account             wyang47_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         581453231341692639
+apps.bank.RequestSucceeded
+       ServerNonce         6738509111210321610
+apps.bank.RequestSucceeded
+       RequestId           17557509080796156451
+
+
+apps.bank.TransferRequest
+       ClientNonce         581453231341692639
+apps.bank.TransferRequest
+       ServerNonce         6738509111210321610
+apps.bank.TransferRequest
+       RequestId           17851361920817683960
+apps.bank.TransferRequest
+       DstAccount          zwang216_account
+apps.bank.TransferRequest
+       Amount              1
+apps.bank.TransferRequest
+       Memo                3bfe5de7c99b87ee5cdc970081fbdc60b1c8fee7ba5e5be73c4fce446e05439e
+
+
+apps.bank.Receipt
+       ClientNonce         581453231341692639
+apps.bank.Receipt
+       ServerNonce         6738509111210321610
+apps.bank.Receipt
+       RequestId           17851361920817683960
+apps.bank.Receipt
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xb3X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xb4X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x10\x00\x00\x00zwang216_accountq\x08]q\t(M\x00\x04K\x01M\x01\x04eX\x0f\x00\x00\x00wyang47_accountq\n]q\x0b(K\x00J\xff\xff\xff\xffK\x00euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 03:53:21 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX@\x00\x00\x003bfe5de7c99b87ee5cdc970081fbdc60b1c8fee7ba5e5be73c4fce446e05439eq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+apps.bank.Receipt
+       ReceiptSignature    b"\xd8\xd0\xb0\x0e\xab4\xe11\x8a\x8f]\x9a\x9d\xa3\x0cWk\xe2\xbf5pf\x12\x02\xe63\x96\x1f\x06J\xff\x86\x95\xf7\xac\x19\xc4\xb3\x0f\x87\xc1%rI\xfa\xd7D\xf1Q\n\xf0\x15c\x14\x9e[\x06]K\xd8\xfc{\xa3\xa5|\t\x13\xa8\xf1rG\xd8\x8c\xea\x92\xd4d\xb4\xa3\x0c\xb7\x9cl\x9fT\xceH\xddo\xf5\xce\xe9\x03PR\x06\xfe\xa2\xc1j\x16\xd6&6[}8\x8d?y\x83\x9fG\x04\xaf'1\xd9N)3\xe6\x80\xc6\\1\xde]\xc2@X\x81Dh\x11\xd1\xeb\n_y\x1e\x99\x02\xcaj+\x07\xfc\xf3\x1c\x94\xc4\xa2\x02\x1e\xe8?`.\x90\x18t\x8a\xcb78+\xaf9\x95\x98^\xd6\\\xd2\xc9\xd9\xa3\xbfr\xe9\xe0\xde\xf4\x96\xae9\x87\xff+\x81\x83_7\x87\xd75J\xf5!7\xc3kB\x83N\xf9\x0f7\xab\xa9\xd1\x0b\xfc\xdf\xb3h\xa0\xeb\x02\xaf\xe66as\xbc\xd0\x03z2iX\xa9H\xf4\xc73\xd9\xe5\x8d\x12\x9e\xc4\xf5\xa9^\xc5\xf4#\xb8\xec\xaf7\xe2\xaa\x0b"
+
+
+apps.bank.OpenSession
+       ClientNonce         11168221873275456347
+apps.bank.OpenSession
+       Login               wyang47
+apps.bank.OpenSession
+       PasswordHash        b'\x89\xc65X\xe5\xf5z5m_/\xcdC\xf4\x06X"\xff(R\xe4n\x15\xf4M)b\x06\xaa\x8boE'
+
+
+apps.bank.SessionOpen
+       ClientNonce         11168221873275456347
+apps.bank.SessionOpen
+       ServerNonce         16382578511363109800
+apps.bank.SessionOpen
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         11168221873275456347
+apps.bank.SwitchAccount
+       ServerNonce         16382578511363109800
+apps.bank.SwitchAccount
+       RequestId           15139751675578821409
+apps.bank.SwitchAccount
+       Account             wyang47_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         11168221873275456347
+apps.bank.RequestSucceeded
+       ServerNonce         16382578511363109800
+apps.bank.RequestSucceeded
+       RequestId           15139751675578821409
+
+
+apps.bank.TransferRequest
+       ClientNonce         11168221873275456347
+apps.bank.TransferRequest
+       ServerNonce         16382578511363109800
+apps.bank.TransferRequest
+       RequestId           14882806905309589814
+apps.bank.TransferRequest
+       DstAccount          jlee662_account
+apps.bank.TransferRequest
+       Amount              5
+apps.bank.TransferRequest
+       Memo                graphchess
+
+
+apps.bank.Receipt
+       ClientNonce         11168221873275456347
+apps.bank.Receipt
+       ServerNonce         16382578511363109800
+apps.bank.Receipt
+       RequestId           14882806905309589814
+apps.bank.Receipt
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xb4X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xb5X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x0f\x00\x00\x00jlee662_accountq\x08]q\t(M\xe9\x03K\x05M\xee\x03eX\x0f\x00\x00\x00wyang47_accountq\n]q\x0b(K\x00J\xfb\xff\xff\xffK\x00euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 04:29:43 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX\n\x00\x00\x00graphchessq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+apps.bank.Receipt
+       ReceiptSignature    b'N(8\x8dC\xea\xb6\x92i\xc4\xcc\xd2\x19\xa7r\xa2\xd2!JM>\xd6/\x13\xc3\xebn\xcd\x04\r\xd3\x93||,\xd9?v\xf4\x00uF\xfbi!9\xbcm\x14St\xa8E\xc7\xc5\xd63H\x9d\xa0w\x8a_H\xa4\xabx\x8fV:F\x17\xf1\xed\xb9$tC(><\xcf\x9d\x96x1\x9b\xb1\xa3\xe7\xf3\xa3\xee\xa2\x90\xa0\xdd~\xa3^\x8f\xcc\xeft\xd8O\x08r\x9a\xb5\xf2\x8a\x86[\xa7\x9a\xdc\x96\xd7\xfd\xa2*\xc7\xf2\x03L+\xf8GK\x91\x8e\xe5{\xc0&\x00\x96\xecv\xcfQa\xbf\xd2>\xed\xf4\xf0\x9eB\xf1\x96\x9a\x05\xb2\xa3hvD\xd6\x1aee\xa9\xfb\xa3\xfc\x1c\x11\x92\xefj\x050\xa6\x06>I\x1eqH\xea\x07o\x9e\xc3\xb9\xb4q\x83~-\x19g\xe9\xc3H\x9cyiv8\x8f\xb7\x91\xcaLT7\x15zw:l?\x99\x11\x0e1og\xbf\xb2e\xa0ew\x1a\x7f\xaf\x81\x0b\x0c\x9b\xf6\xf6\xfa\x0c\x18`\x98\xe3Q\x00xj\xa8)#\xe9\xce&\xb5\xb4$'
+
+
+apps.bank.OpenSession
+       ClientNonce         4100215196295500707
+apps.bank.OpenSession
+       Login               wyang47
+apps.bank.OpenSession
+       PasswordHash        b'\x89\xc65X\xe5\xf5z5m_/\xcdC\xf4\x06X"\xff(R\xe4n\x15\xf4M)b\x06\xaa\x8boE'
+
+
+apps.bank.SessionOpen
+       ClientNonce         4100215196295500707
+apps.bank.SessionOpen
+       ServerNonce         4876677878971909810
+apps.bank.SessionOpen
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         4100215196295500707
+apps.bank.SwitchAccount
+       ServerNonce         4876677878971909810
+apps.bank.SwitchAccount
+       RequestId           4637311641438788663
+apps.bank.SwitchAccount
+       Account             wyang47_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         4100215196295500707
+apps.bank.RequestSucceeded
+       ServerNonce         4876677878971909810
+apps.bank.RequestSucceeded
+       RequestId           4637311641438788663
+
+
+apps.bank.TransferRequest
+       ClientNonce         4100215196295500707
+apps.bank.TransferRequest
+       ServerNonce         4876677878971909810
+apps.bank.TransferRequest
+       RequestId           16863195295369142470
+apps.bank.TransferRequest
+       DstAccount          jlee662_account
+apps.bank.TransferRequest
+       Amount              5
+apps.bank.TransferRequest
+       Memo                graphchess
+
+
+apps.bank.Receipt
+       ClientNonce         4100215196295500707
+apps.bank.Receipt
+       ServerNonce         4876677878971909810
+apps.bank.Receipt
+       RequestId           16863195295369142470
+apps.bank.Receipt
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xb5X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xb6X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x0f\x00\x00\x00jlee662_accountq\x08]q\t(M\xee\x03K\x05M\xf3\x03eX\x0f\x00\x00\x00wyang47_accountq\n]q\x0b(K\x00J\xfb\xff\xff\xffK\x00euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 04:32:28 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX\n\x00\x00\x00graphchessq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+apps.bank.Receipt
+       ReceiptSignature    b'\x11\xb6s\x87\x03\x93\x99\xea\xd1\x11\x1c\x9b!A\xf93\xa0\xbb\xbcd\xb8J\x18\xaf\xe0\xa8{\xa2\x83\xde[\xa5E\xd6o\xc3|\x1e\xbf0M\xce:\xfc\xa1\xa9\xab\xf0M\xf7Y|\x02\x98Yf\x93\xfa\x1bx\xfd\xb8\x1c\xea\xf1\x8bL\x82\x14\x16\xbb\xf9r}s\xf6\xad\xb5\xb5F`\xb3_\xc3\n\x93\x94}\xd2\x9ef\xe4\xfb\xe3:\xd1\x16\xed\x1e\xc8\xb2b\xd3\x07\xf1!\xde@\xd0\xd4\x9e\x85\xa0+\xe9\xd5=f\x16\x80(R1Ocv\xd0\xb6\xb85u\x1d7C\xb8\xba\x16\n\xf3\xa8\x0e\xabg&M\x92\x9c\r\xa3v\x7fA\xf3\xfd\x03]\xf5\xb4\xe6\xbb\xf2\xe1c\xe31\xb9\xed\x1b2\x7f\xc1\xdaO\xab\x15\x01;P\x1a\x95=\x8fG\x0f\x99\r\xfe/6\xab$jC\xddw\xd2\xceB_t\xc2S\xe0\xb1\xd1.c\x7fxv\xb9\xf1[\x9f\xb9\xe9q)\xc1C\x982M\x8c\xdbk\xcf\x12\xdc\xeaA\x12n\xa0\xca\xba\x1a\xc1\xec\xd0\xb7\x8e\xea\xdb\x9c\xd8H#0\x99\xf1@\x08\xa0\x07\x1f'
+
+
+apps.bank.OpenSession
+       ClientNonce         1985770848917754290
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'G\x1dV\xb7\\G\x90\xf3\xc6\xa6`\x9dY\xbf\xd9Ol\x0c\x8fqL,Q\xb7\x08R?J9\x7f\x11a'
+
+
+apps.bank.SessionOpen
+       ClientNonce         1985770848917754290
+apps.bank.SessionOpen
+       ServerNonce         1179050992243887177
+apps.bank.SessionOpen
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         1985770848917754290
+apps.bank.SwitchAccount
+       ServerNonce         1179050992243887177
+apps.bank.SwitchAccount
+       RequestId           12092059457176321288
+apps.bank.SwitchAccount
+       Account             jlee662_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         1985770848917754290
+apps.bank.RequestSucceeded
+       ServerNonce         1179050992243887177
+apps.bank.RequestSucceeded
+       RequestId           12092059457176321288
+
+
+apps.bank.TransferRequest
+       ClientNonce         1985770848917754290
+apps.bank.TransferRequest
+       ServerNonce         1179050992243887177
+apps.bank.TransferRequest
+       RequestId           232759252675284255
+apps.bank.TransferRequest
+       DstAccount          zwang216_account
+apps.bank.TransferRequest
+       Amount              1
+apps.bank.TransferRequest
+       Memo                3bfe5de7c99b87ee5cdc970081fbdc60b1c8fee7ba5e5be73c4fce446e05439e
+
+
+apps.bank.Receipt
+       ClientNonce         1985770848917754290
+apps.bank.Receipt
+       ServerNonce         1179050992243887177
+apps.bank.Receipt
+       RequestId           232759252675284255
+apps.bank.Receipt
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xb6X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xb7X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x10\x00\x00\x00zwang216_accountq\x08]q\t(M\x01\x04K\x01M\x02\x04eX\x0f\x00\x00\x00jlee662_accountq\n]q\x0b(K\x00J\xff\xff\xff\xffK\x00euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 13:38:58 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX@\x00\x00\x003bfe5de7c99b87ee5cdc970081fbdc60b1c8fee7ba5e5be73c4fce446e05439eq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+apps.bank.Receipt
+       ReceiptSignature    b'\x01^{\x84\xdfy\xc3\x04\x05\xe4W0\xb1)S\x1b\x0e\xc1\xdf\xcb\x1aAy\x9dD\x1dmZ\xf0\x80TB(3\x9dM\xd7c)=<c\x1c\x8d\xfa\x9f\xfd\xd1\x0f\x85\xffr\x85L\x0c3x"\xf3\x9a\xb2J\xfa\xf5MEJ\x98\x02\x0e\xb1\x0cX&\x87D\xf9\xf0\x9bJ\xfc\xe3\xf2\x80:fB[\xd7\xa6l\x17P\x8f\xbcC\x1a\xb1\x9f\xb72\xbe\xe7\xdf\xc5\xeaSos\xb8\x10\xbdO\x03X\x1b^\x8b.>\x91\x99aq0\xc0\x98?\'\xc8m\xb0_\xc8\xb5\xbcN\xcb\xc1z}\x86g\x81h\xff!\xbae\xa0j."\x07\xffM\xe8\x06:\xb9\x943\x8fF\x12\xf9\xc1\xbe\\\xfaI\xb8&\xfb\x0c\x89e\xcf\xb3@\xa9\xe4\xf3P\x19\xf7\x9c\xde\\"\xe1tMs"\xef+\xdck>e\x9f\x17\xacdT\xd0\x9f\x03\x95\xe3\xc0\xb9\xb6\xcb5\x95T\xb2#\xbdc\xca@\xaf\x14\x018\xfb\xb9\xa7\x08\xb8\xc1\xf1j\xd9^\'\xd0F\xc9\x83#\xa3V\x9e\x97R.$AO\xde\x89\xcf'
+
+
+apps.bank.OpenSession
+       ClientNonce         17501311698483152331
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'\x94\x18\x81\x0f\x90\xa9\x9a\x7f\xb8\x94\x94<\xdc\xd0\x86\xe3\x85\xa5\xb4k\xe6\xe5\xda",~U\xf8D\x08Ur'
+
+
+apps.bank.LoginFailure
+       ClientNonce         17501311698483152331
+apps.bank.LoginFailure
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         15648314690521679421
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'\x94\x18\x81\x0f\x90\xa9\x9a\x7f\xb8\x94\x94<\xdc\xd0\x86\xe3\x85\xa5\xb4k\xe6\xe5\xda",~U\xf8D\x08Ur'
+
+
+apps.bank.LoginFailure
+       ClientNonce         15648314690521679421
+apps.bank.LoginFailure
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         9036485306614296688
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'\x94\x18\x81\x0f\x90\xa9\x9a\x7f\xb8\x94\x94<\xdc\xd0\x86\xe3\x85\xa5\xb4k\xe6\xe5\xda",~U\xf8D\x08Ur'
+
+
+apps.bank.LoginFailure
+       ClientNonce         9036485306614296688
+apps.bank.LoginFailure
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         12298905595610182600
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'\x94\x18\x81\x0f\x90\xa9\x9a\x7f\xb8\x94\x94<\xdc\xd0\x86\xe3\x85\xa5\xb4k\xe6\xe5\xda",~U\xf8D\x08Ur'
+
+
+apps.bank.LoginFailure
+       ClientNonce         12298905595610182600
+apps.bank.LoginFailure
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         12560537077405192001
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'\x94\x18\x81\x0f\x90\xa9\x9a\x7f\xb8\x94\x94<\xdc\xd0\x86\xe3\x85\xa5\xb4k\xe6\xe5\xda",~U\xf8D\x08Ur'
+
+
+apps.bank.LoginFailure
+       ClientNonce         12560537077405192001
+apps.bank.LoginFailure
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         17668132802992329688
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'\x94\x18\x81\x0f\x90\xa9\x9a\x7f\xb8\x94\x94<\xdc\xd0\x86\xe3\x85\xa5\xb4k\xe6\xe5\xda",~U\xf8D\x08Ur'
+
+
+apps.bank.LoginFailure
+       ClientNonce         17668132802992329688
+apps.bank.LoginFailure
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         118071089423554402
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'\x94\x18\x81\x0f\x90\xa9\x9a\x7f\xb8\x94\x94<\xdc\xd0\x86\xe3\x85\xa5\xb4k\xe6\xe5\xda",~U\xf8D\x08Ur'
+
+
+apps.bank.LoginFailure
+       ClientNonce         118071089423554402
+apps.bank.LoginFailure
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         11357975176262269104
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'\x94\x18\x81\x0f\x90\xa9\x9a\x7f\xb8\x94\x94<\xdc\xd0\x86\xe3\x85\xa5\xb4k\xe6\xe5\xda",~U\xf8D\x08Ur'
+
+
+apps.bank.LoginFailure
+       ClientNonce         11357975176262269104
+apps.bank.LoginFailure
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         915842419977682316
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'\x94\x18\x81\x0f\x90\xa9\x9a\x7f\xb8\x94\x94<\xdc\xd0\x86\xe3\x85\xa5\xb4k\xe6\xe5\xda",~U\xf8D\x08Ur'
+
+
+apps.bank.LoginFailure
+       ClientNonce         915842419977682316
+apps.bank.LoginFailure
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         2215695708665694668
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'G\x1dV\xb7\\G\x90\xf3\xc6\xa6`\x9dY\xbf\xd9Ol\x0c\x8fqL,Q\xb7\x08R?J9\x7f\x11a'
+
+
+apps.bank.SessionOpen
+       ClientNonce         2215695708665694668
+apps.bank.SessionOpen
+       ServerNonce         16120863546190190587
+apps.bank.SessionOpen
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         2215695708665694668
+apps.bank.SwitchAccount
+       ServerNonce         16120863546190190587
+apps.bank.SwitchAccount
+       RequestId           328778821562672880
+apps.bank.SwitchAccount
+       Account             jlee662_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         2215695708665694668
+apps.bank.RequestSucceeded
+       ServerNonce         16120863546190190587
+apps.bank.RequestSucceeded
+       RequestId           328778821562672880
+
+
+apps.bank.TransferRequest
+       ClientNonce         2215695708665694668
+apps.bank.TransferRequest
+       ServerNonce         16120863546190190587
+apps.bank.TransferRequest
+       RequestId           9288155083480334910
+apps.bank.TransferRequest
+       DstAccount          zli122_account
+apps.bank.TransferRequest
+       Amount              5
+apps.bank.TransferRequest
+       Memo                -8793415612131377902
+
+
+apps.bank.Receipt
+       ClientNonce         2215695708665694668
+apps.bank.Receipt
+       ServerNonce         16120863546190190587
+apps.bank.Receipt
+       RequestId           9288155083480334910
+apps.bank.Receipt
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xb7X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xb8X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x0f\x00\x00\x00jlee662_accountq\x08]q\t(K\x00J\xfb\xff\xff\xffK\x00eX\x0e\x00\x00\x00zli122_accountq\n]q\x0b(M\xf7\x03K\x05M\xfc\x03euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 14:16:04 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX\x14\x00\x00\x00-8793415612131377902q\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+apps.bank.Receipt
+       ReceiptSignature    b'M\x0c4\xe37[S\xac9\x80\x12\x04\x80{E*\xbd\xc3\n\x99\x9f\xa7\xa1\xc4&\xbe\xabI\x14( \x1d-\x1a\xa1n$P\xb9HA\xb8Z%A^<\xb2\x87\x7f"\xd0\x15\x0ezi\t<"\xf2\xc1\xcd?\xc7\x12\x9a\xec\x91@I\xaaH\xbbO\xcf[\xa1n \x7f4H\x13h-\x1a\x01mP\xa3UyU(\x9do\x0c=\x1c\xac\x9dr\x17+\x0b\xd4\x0f<U\x82\xf4\xd8\xe1\xa1\'\xfc\xe4\xce0\xf0\n\x8b\xff\xde7\x12XcC\xba5QE\x03\xe2Y\xa1\xaa\x7fO{.\xc3\x1e\xda\xf8Q\xe0\xb8\x97nb*\xf0\xcf\x9e\xeb\\\xbd\x1e9\x8d\xd9q\xb0m\xf8I\x8f\xd8\xf6\xa7\xdf\x82C\x7fv\xc2\xdc\xf5\xf6\xe6\xb5\xe4ej\x17\xd7\r3\xa1\x8cm\x99H\x05[\x0fU>A@\xf9Z\xaf2\x95V\r\xd8\x1d\xabZ&%\to\xab\n\xd5K\xad\xb9\xfa\xb7p2\xe4\x01\xc0J\xbc\xb0Z\x89}\xde\xd2\x15u\x10\x8a\x7f\xaeU_\xc3\x81\xf6\x17\xbd\xc745\x1f\xcd'
+
+
+apps.bank.OpenSession
+       ClientNonce         10383226277626448539
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'G\x1dV\xb7\\G\x90\xf3\xc6\xa6`\x9dY\xbf\xd9Ol\x0c\x8fqL,Q\xb7\x08R?J9\x7f\x11a'
+
+
+apps.bank.SessionOpen
+       ClientNonce         10383226277626448539
+apps.bank.SessionOpen
+       ServerNonce         15320789124174003690
+apps.bank.SessionOpen
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         10383226277626448539
+apps.bank.SwitchAccount
+       ServerNonce         15320789124174003690
+apps.bank.SwitchAccount
+       RequestId           13864821017142124517
+apps.bank.SwitchAccount
+       Account             jlee662_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         10383226277626448539
+apps.bank.RequestSucceeded
+       ServerNonce         15320789124174003690
+apps.bank.RequestSucceeded
+       RequestId           13864821017142124517
+
+
+apps.bank.TransferRequest
+       ClientNonce         10383226277626448539
+apps.bank.TransferRequest
+       ServerNonce         15320789124174003690
+apps.bank.TransferRequest
+       RequestId           15570545305123070946
+apps.bank.TransferRequest
+       DstAccount          sabdous1_account
+apps.bank.TransferRequest
+       Amount              10
+apps.bank.TransferRequest
+       Memo                3bf878aa-e79e-11e9-ad0b-000c29af344f
+
+
+apps.bank.Receipt
+       ClientNonce         10383226277626448539
+apps.bank.Receipt
+       ServerNonce         15320789124174003690
+apps.bank.Receipt
+       RequestId           15570545305123070946
+apps.bank.Receipt
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xb8X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xb9X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x0f\x00\x00\x00jlee662_accountq\x08]q\t(K\x00J\xf6\xff\xff\xffK\x00eX\x10\x00\x00\x00sabdous1_accountq\n]q\x0b(M\xe8\x03K\nM\xf2\x03euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 14:30:41 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX$\x00\x00\x003bf878aa-e79e-11e9-ad0b-000c29af344fq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+apps.bank.Receipt
+       ReceiptSignature    b'\xbd\xbcF><9\xec\x06\x8d]\xb0\x17;/\xfd\xeab.\xb9\x1a\x0c"6gWN\x1a\xc05\x1f\xfaX\x90\xc1\xb9\xb6\x12\x0bH\x80\xb6\xc2\xea\x9e\xd02@7\x12\xae\xcb+j\xaaF\x07.ah\xf6\x01"\xb5\x18\x07J\xc37\x9c]PC\xdf\x93\xeckj<)\xc6\xe9\x95NG\xedz\xf9\xa3k\xd8[40B\x99\xd5\xb7\xc3FGK!\xac\x1d\xf9G\x13\xf0\xa0\xdb\x9b\x8eG\xe8%j\x10\x9c\x82K\x03-H\xea\x8d65\xa7\xcb\x86\x15Z\xb3\x84T\xc8\x16~A\xb6\xd3\x0c\xd0\x93\x0bi\x7f\xd32\xc7s\xd0e\x1c\x14\x98\xcd\xa6\xed\xaf\xc9\xee\xefFr\x1b\x0fo\xf5+\xdc\xb7\x9c\x91\x97Y\xd5\xc3\xbb\x80\xdc\xbd\xb7,r\xe4s\xef\xfd\xb9\xd205sYE7\xf3\xa5\x12\xf2\xa9-\xe9\xa9p\xa6\xeb\x99?\x8a\xd1\xa9;0\xc8\x8b\xf4\xea\x8f\xb3\xcc_\xffM\xdd\xc1j\xb2\xcf\x07b\x17\xb96\x9cZc\xa3\x91y\xd3\xf1\x1c\x9ff\x00\x0b3\xb6\x08>\xcf!8\x15'
+
+
+apps.bank.OpenSession
+       ClientNonce         17140224179260973494
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'G\x1dV\xb7\\G\x90\xf3\xc6\xa6`\x9dY\xbf\xd9Ol\x0c\x8fqL,Q\xb7\x08R?J9\x7f\x11a'
+
+
+apps.bank.SessionOpen
+       ClientNonce         17140224179260973494
+apps.bank.SessionOpen
+       ServerNonce         608591769085683337
+apps.bank.SessionOpen
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         17140224179260973494
+apps.bank.SwitchAccount
+       ServerNonce         608591769085683337
+apps.bank.SwitchAccount
+       RequestId           9897244035015345660
+apps.bank.SwitchAccount
+       Account             jlee662_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         17140224179260973494
+apps.bank.RequestSucceeded
+       ServerNonce         608591769085683337
+apps.bank.RequestSucceeded
+       RequestId           9897244035015345660
+
+
+apps.bank.TransferRequest
+       ClientNonce         17140224179260973494
+apps.bank.TransferRequest
+       ServerNonce         608591769085683337
+apps.bank.TransferRequest
+       RequestId           11378054214307677028
+apps.bank.TransferRequest
+       DstAccount          sabdous1_account
+apps.bank.TransferRequest
+       Amount              10
+apps.bank.TransferRequest
+       Memo                a3796a66-e79e-11e9-ad0b-000c29af344f
+
+
+apps.bank.Receipt
+       ClientNonce         17140224179260973494
+apps.bank.Receipt
+       ServerNonce         608591769085683337
+apps.bank.Receipt
+       RequestId           11378054214307677028
+apps.bank.Receipt
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xb9X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xbaX\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x0f\x00\x00\x00jlee662_accountq\x08]q\t(K\x00J\xf6\xff\xff\xffK\x00eX\x10\x00\x00\x00sabdous1_accountq\n]q\x0b(M\xf2\x03K\nM\xfc\x03euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 14:33:35 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX$\x00\x00\x00a3796a66-e79e-11e9-ad0b-000c29af344fq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+apps.bank.Receipt
+       ReceiptSignature    b'\x99@\xc14:\xd7x\r\xc1\xdd\x9b\x13\xd0n\xb3\xe3\x92\xec9\xdb\xec\xd6\xe4\x89\x0bw~\xf1\xbf\xc3\x0e!\x9d\xebv5\xd0\xcf\xe8\xdb\xe4\x0f\xa7F\xc3:\r\xc5bY\xb1\x07\xcc\xe5\xf7\xe2\xaf\xea\xacm\xdc\xaf9\xdar4n$\x9c%\xa5\x0f\x85\xa5\xcb\x86\xb6B\x19\xe9N\xc0\xc9\xdaZ\xd41d\xf3e\xf1\x0e\xf2\xb8 \xfc\xc6\x9c\x80u\x01\xb1d\x07\xd0\xdc\xb07\xfd\x81\xab\x15\xfb\x1c\xa2\x89A\\\xc2\xc2\xc6w\xdb\x03\xae\x8f\xa5N\xae\xb9+0\x1a8^f\xb4\x0b\xb2\xce\x11a\xd4\xbf\x08\x90y8\xa5.M\xfa\x89;r\xa6\x17\xe9\x9e\xd8\xc3\xd3N\x95\xa6\x14)\xbf|\x0c\xca\xab\xe8\x08C8\xb3\x05@\xc8\x8a&\xb4\xb8 \xca\xabL\xc8\xca\x04\xba\xb8\x06g\xd0.R\x8a^\x06]\xf3\xcf\xd4\x95ci%\x0f\x7f\xa7`Lz\\\x12Uu\xd8@Qs#:\x0b[\x99#S1"\xe9sb4i_\xa1\xbfeW\xa9\'\xb4\x1a8\xab\x1e\xd4\xc51\x02\xb7\x80J'
+
+
+apps.bank.OpenSession
+       ClientNonce         7049102505394082114
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'G\x1dV\xb7\\G\x90\xf3\xc6\xa6`\x9dY\xbf\xd9Ol\x0c\x8fqL,Q\xb7\x08R?J9\x7f\x11a'
+
+
+apps.bank.SessionOpen
+       ClientNonce         7049102505394082114
+apps.bank.SessionOpen
+       ServerNonce         2226383162423202976
+apps.bank.SessionOpen
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         7049102505394082114
+apps.bank.SwitchAccount
+       ServerNonce         2226383162423202976
+apps.bank.SwitchAccount
+       RequestId           12503538821842136359
+apps.bank.SwitchAccount
+       Account             jlee662_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         7049102505394082114
+apps.bank.RequestSucceeded
+       ServerNonce         2226383162423202976
+apps.bank.RequestSucceeded
+       RequestId           12503538821842136359
+
+
+apps.bank.TransferRequest
+       ClientNonce         7049102505394082114
+apps.bank.TransferRequest
+       ServerNonce         2226383162423202976
+apps.bank.TransferRequest
+       RequestId           10085168409678499199
+apps.bank.TransferRequest
+       DstAccount          zwang216_account
+apps.bank.TransferRequest
+       Amount              1
+apps.bank.TransferRequest
+       Memo                3bfe5de7c99b87ee5cdc970081fbdc60b1c8fee7ba5e5be73c4fce446e05439e
+
+
+apps.bank.Receipt
+       ClientNonce         7049102505394082114
+apps.bank.Receipt
+       ServerNonce         2226383162423202976
+apps.bank.Receipt
+       RequestId           10085168409678499199
+apps.bank.Receipt
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xbaX\x13\x00\x00\x00_LedgerLine__numberq\x04K\xbbX\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x10\x00\x00\x00zwang216_accountq\x08]q\t(M\x02\x04K\x01M\x03\x04eX\x0f\x00\x00\x00jlee662_accountq\n]q\x0b(K\x00J\xff\xff\xff\xffK\x00euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 14:34:57 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX@\x00\x00\x003bfe5de7c99b87ee5cdc970081fbdc60b1c8fee7ba5e5be73c4fce446e05439eq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+apps.bank.Receipt
+       ReceiptSignature    b"\x81Q\x01\xc5\xf7\xfcA\x17\xf2\xe9yh\x0e\xbb<\x18\xd8\xb3\xe9\x96Sg\x04\xc9\x8f\x81@\xd9\x18\xae\x8b\xa3Z\xa7\xb61\xe6\xd6)\xe5\xd8\xe8 \xf7\x12\x07\x86\xe2\xfeB\x92\xaazZ\xcd\x99G@\x84\xfb%\xe0\\\xb9I\x96\xdd\x8c\x02zZ[\xed\n\xd3(\x81\x8b'\xf0\x12EbZ#\xed\xfd}\x8d\x80k\xf4\x8d\xaa<\x96\x82\xa3(L\x10\xa3\xd3>\x1b\xcd\xf6d\xf6\x9b}\x19\xb2w\xe5\xe0?\xe6\x04\xe0J2\xd1j\r\xbf`\x0f\xf2\x93\x00\xa5\xd3\xa5\x08\xb7\x19\x0e\r\x19\xca\x00\xd6\xb2 \xb9d\x05\x8b6\x88\xdfrZ\x02\xc1\xc6\xbb\xdb\x0b\xe7G\xfb\xd6\xc6w\xd2\x9feK}\xb0\x9ft\x15%:\x88Y\xcf:-\xc6\x98\xb0?\x9dt4D\xd3Z\xa8\xda\x87\xda2~\xe1\xe4\x0e\xbc#2\x1e\xb1i\xcf\xa5\x81\x97\xfa8L\xa5Q{\x93\x92\x91\xcb\xbb5\xe6@G\x8cD\x1f\xe2V\x16&\xc0\xb83^\xfc\xf5\xa6\xe5K}\\Y\xdf(\xbcc\xef\xc2j\x9d\xce\x04\x10"
+
+
+apps.bank.OpenSession
+       ClientNonce         5418108940551387231
+apps.bank.OpenSession
+       Login               jlee662
+apps.bank.OpenSession
+       PasswordHash        b'G\x1dV\xb7\\G\x90\xf3\xc6\xa6`\x9dY\xbf\xd9Ol\x0c\x8fqL,Q\xb7\x08R?J9\x7f\x11a'
+
+
+apps.bank.SessionOpen
+       ClientNonce         5418108940551387231
+apps.bank.SessionOpen
+       ServerNonce         9392803991559831266
+apps.bank.SessionOpen
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         5418108940551387231
+apps.bank.SwitchAccount
+       ServerNonce         9392803991559831266
+apps.bank.SwitchAccount
+       RequestId           12612463483345144021
+apps.bank.SwitchAccount
+       Account             jlee662_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         5418108940551387231
+apps.bank.RequestSucceeded
+       ServerNonce         9392803991559831266
+apps.bank.RequestSucceeded
+       RequestId           12612463483345144021
+
+
+apps.bank.TransferRequest
+       ClientNonce         5418108940551387231
+apps.bank.TransferRequest
+       ServerNonce         9392803991559831266
+apps.bank.TransferRequest
+       RequestId           13986121302176296912
+apps.bank.TransferRequest
+       DstAccount          zwang216_account
+apps.bank.TransferRequest
+       Amount              1
+apps.bank.TransferRequest
+       Memo                3bfe5de7c99b87ee5cdc970081fbdc60b1c8fee7ba5e5be73c4fce446e05439e
+
+
+apps.bank.Receipt
+       ClientNonce         5418108940551387231
+apps.bank.Receipt
+       ServerNonce         9392803991559831266
+apps.bank.Receipt
+       RequestId           13986121302176296912
+apps.bank.Receipt
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xbbX\x13\x00\x00\x00_LedgerLine__numberq\x04K\xbcX\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x10\x00\x00\x00zwang216_accountq\x08]q\t(M\x03\x04K\x01M\x04\x04eX\x0f\x00\x00\x00jlee662_accountq\n]q\x0b(K\x00J\xff\xff\xff\xffK\x00euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 14:35:45 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX@\x00\x00\x003bfe5de7c99b87ee5cdc970081fbdc60b1c8fee7ba5e5be73c4fce446e05439eq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+apps.bank.Receipt
+       ReceiptSignature    b'=\x8b\xc6z\xab}\xf2!!\xdc\xf40F\x95kG\xd7\xe5\xbd\xbf\x95TO<T\xde1fE\xe7C2\x06J6\xed\x07\xcb\xbfo\xc0\x14\xad~<D\xcfO\x16\xd7c\xf8O\x1a\xac.GA+|\x12\xc6\x89\x9c\xa7\xf7\xac! \x1aWP\xd7\xef\x87\r\xc6\xb1]\x93<\xbd\x92\x1a\xdfe.!e\xa5\x9bxsZ\xec\x9d\xbd\xad\xa7\xdc\xbf\x98P%\xb6/_c\xf5P\x97\x91\t\xb4\xaf\xed\x82\x9e;\xae\xec\x00!SgA\x94\x8c\xf3\x0bq\xed0\xbc\xb9\x8dd\xf5\xd8T\xfdn\xd2\x86UD\x95\xeb\x14\xe5\xc2\xd1Ov\xca\x00\xf4W\x00\x1c\xe3\xf8\x1a\'\xbc\xbf"\x1a\xcf\xf3\xf9\xa7\xfc\xe5hX\xa2\xd5\xf4w\x87\xa9\xda\xdfr\x19\x07\xa8c\xe0=\xd8,\xb5h\x9c\xcc|Rv`\x0b\x93\xd3k\xfc\xee\x17$O\xcdRPgK0\x8c\x83B\x8a\xe4F\x9a\x8f\\k\xc3\xfc\x9f\xf9m \x1f\xfcP\xcb\x89\x0e\xafX0*$\xe9\x9f\x88\x8c\xb9\xe3\xa6\xd6\xbb\x0f\x87Ze'
+
+
+apps.bank.OpenSession
+       ClientNonce         7644286790497294647
+       Login               xma39
+       PasswordHash        b'5\xfb|\x19\x7f\xf1\x9c\x884)cC\x0e\x8fFp\xbfq\x1a\xedt\x1c1v\x85\xec\t\x18\xfa1Ms'
+
+
+apps.bank.LoginFailure
+       ClientNonce         7644286790497294647
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.LoginFailure
+       ClientNonce         10511096001960865219
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.LoginFailure
+       ClientNonce         2632288974959148941
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.LoginFailure
+       ClientNonce         9277823320646041944
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.LoginFailure
+       ClientNonce         1611789648404160970
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.LoginFailure
+       ClientNonce         13430249398587803932
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         14083867893115424358
+       Login               wbai3_account
+       PasswordHash        b"\x85\x02\x97\xe8=\xe2\xbe7\xbe\xd2\xca\x0c\x9c\xa8\xfb<[\xe4\xaf\xb8\x8a\x84\x0e\xe1\xc6'!\xaf9\xf0)\x19"
+
+
+apps.bank.OpenSession
+       ClientNonce         17616602668462548145
+       Login               yyang179
+       PasswordHash        b'\xdd\xbc\xf5n[u\r3\xb1\xa6\t\r\xb1 T\x05\xe5ej\x0e\xa1\xf2m\xff\xdaW\x99)\x8d\x13\xe1\xb8'
+
+
+apps.bank.OpenSession
+       ClientNonce         12313948248136152269
+       Login               yyang179
+       PasswordHash        b'\x17\xd8-\xf7v\xb1\x0f)f\xb7\xc2\xb6\x8f[\xa0\x04\x13\xd2\xff/\x13\x14\xfd\xc1\xa3\xf9p\xd8\xbd\xc4)\x89'
+
+
+apps.bank.OpenSession
+       ClientNonce         963070074559641980
+       Login               yyang179
+       PasswordHash        b'g#\xc2K\x93\x13Aq\xd9C\x0c\x02[\xb1\xfcj\xb0i\xff\x96\xf8\x06\x044\x1b\x8e\x03\xbb\xca+\x1e\x01'
+
+
+apps.bank.OpenSession
+       ClientNonce         5504330238788262977
+       Login               wbai3
+       PasswordHash        b'^\xf0\xfa\x87\xd0\xf3\xd5\x08\xc5\xce\x8f\x91\x97\xa1L%r\xb3\xfd\xb8\xcd -\x19\xb3b\xff\xbd\xf6\x958\xb5'
+
+
+apps.bank.SessionOpen
+       ClientNonce         5504330238788262977
+       ServerNonce         17083762866437093979
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         5504330238788262977
+       ServerNonce         17083762866437093979
+       RequestId           6936665629305938951
+       Account             wbai3_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         5504330238788262977
+       ServerNonce         17083762866437093979
+       RequestId           6936665629305938951
+
+
+apps.bank.TransferRequest
+       ClientNonce         5504330238788262977
+       ServerNonce         17083762866437093979
+       RequestId           8632445774703607579
+       DstAccount          sabdous1_account
+       Amount              10
+       Memo                8ed6c548-e7af-11e9-ad0b-000c29af344f
+
+
+apps.bank.Receipt
+       ClientNonce         5504330238788262977
+       ServerNonce         17083762866437093979
+       RequestId           8632445774703607579
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xbcX\x13\x00\x00\x00_LedgerLine__numberq\x04K\xbdX\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\r\x00\x00\x00wbai3_accountq\x08]q\t(K\x00J\xf6\xff\xff\xffK\x00eX\x10\x00\x00\x00sabdous1_accountq\n]q\x0b(M\xfc\x03K\nM\x06\x04euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 16:34:42 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX$\x00\x00\x008ed6c548-e7af-11e9-ad0b-000c29af344fq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+       ReceiptSignature    b'.\x15\x1b\xbb\x05,\xd4\x03Z\x92\xc48\xd9z\xa6r6K\xc5+\xdd\xcb\xd1Y\xce\t\x0e\xd7j\x06C\x07\x16\xe0\x85"\xccC(\xc0\xd9\xd4[{p\xfe\xa4\x8e\xf0;\xd5s\x8a%\x13\xdd\x1a&\x8az}\xfe\x10\xc2\xc9\xc1\x9b\x1e\xb4q\x98\xd0Q\x86F\xe7r\xfbe\xc7]\x86\xd3^j\xe1<\x84\x1a{\xe6\xcbH\xbe\xff\xf6\xc9j\xc5\xd9\xf3\x1a\xee\x14E.41\x15B\x9cY\x86U\xb6\x9e\xb3\xcd\'\xa0t\x9a$\xc8Mdu\x99?:xQ#\x92:?]\xba-\\\x92\x10\x0cy\xceQW\xc0\x0c\xcb\xcdmJYAsj\x02h?\x9c\xc2\x0e\xd4\xca<\xf4\xe9\xcd9\xa1\x13\x1e_r\xbb\x87\xdf\xc0\xf0\xce\x10\xfb\x9c\xc7\x08\xe6\x05\xf1~m\x95\xec\xa0\x1e\x92"F\x82\x1c\xd5\xe5\xbd\xd1\xaa6\xdfI\x97Rs\xfa*N\x17\xb3\x98\x80\'\xadR\xa1$K\xe0n\x89\xab\xac\r\xc2\xab\xa9\xe7\xa1\xf4&\xf7,rsO\xd6\xdd\' k\'\x1e\xb185pU\x97\xf9'
+
+
+apps.bank.OpenSession
+       ClientNonce         11982413041118699929
+       Login               yyang179
+       PasswordHash        b'g#\xc2K\x93\x13Aq\xd9C\x0c\x02[\xb1\xfcj\xb0i\xff\x96\xf8\x06\x044\x1b\x8e\x03\xbb\xca+\x1e\x01'
+
+
+apps.bank.OpenSession
+       ClientNonce         18055084346110180950
+       Login               yyang179
+       PasswordHash        b'g#\xc2K\x93\x13Aq\xd9C\x0c\x02[\xb1\xfcj\xb0i\xff\x96\xf8\x06\x044\x1b\x8e\x03\xbb\xca+\x1e\x01'
+
+
+apps.bank.OpenSession
+       ClientNonce         4612706856452245815
+       Login               yyang179
+       PasswordHash        b'g#\xc2K\x93\x13Aq\xd9C\x0c\x02[\xb1\xfcj\xb0i\xff\x96\xf8\x06\x044\x1b\x8e\x03\xbb\xca+\x1e\x01'
+
+
+apps.bank.OpenSession
+       ClientNonce         16996920605788046212
+       Login               wbai3
+       PasswordHash        b'^\xf0\xfa\x87\xd0\xf3\xd5\x08\xc5\xce\x8f\x91\x97\xa1L%r\xb3\xfd\xb8\xcd -\x19\xb3b\xff\xbd\xf6\x958\xb5'
+
+
+apps.bank.SessionOpen
+       ClientNonce         16996920605788046212
+       ServerNonce         10774793847394290066
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         16996920605788046212
+       ServerNonce         10774793847394290066
+       RequestId           8511616484111221814
+       Account             wbai3_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         16996920605788046212
+       ServerNonce         10774793847394290066
+       RequestId           8511616484111221814
+
+
+apps.bank.TransferRequest
+       ClientNonce         16996920605788046212
+       ServerNonce         10774793847394290066
+       RequestId           4887219099403828835
+       DstAccount          sabdous1_account
+       Amount              10
+       Memo                b2631754-e7b0-11e9-ad0b-000c29af344f
+
+
+apps.bank.Receipt
+       ClientNonce         16996920605788046212
+       ServerNonce         10774793847394290066
+       RequestId           4887219099403828835
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xbdX\x13\x00\x00\x00_LedgerLine__numberq\x04K\xbeX\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\r\x00\x00\x00wbai3_accountq\x08]q\t(K\x00J\xf6\xff\xff\xffK\x00eX\x10\x00\x00\x00sabdous1_accountq\n]q\x0b(M\x06\x04K\nM\x10\x04euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 16:42:51 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX$\x00\x00\x00b2631754-e7b0-11e9-ad0b-000c29af344fq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+       ReceiptSignature    b'\xc1\x8a\xe2@\xf5Si\x05\xeaA\x05\xdd\xd7\xaa\xa6\xb6\xde\xc2E\x8e\xd5\xaaG\x9ak\xcfL`pk\xb6-\xff\xdc\xd2\x18\x05\x93\x91*{\xb2!\xa9\xb9\x018\xd2u\xc7-\xc4\x9c\x02io\x0544\xad\x99\xa4\x15\xd1\xa15\xcd\\\xf1q\xdd\xa6\xf8Y?T\xf1k\xf6\xdc\xd5\xe13.\xfex#\x13\xf9\xe4\x19\x01\xb5J"TU\x1a\xca9,C\xed~iK\xa1\xd6\xce\x94[\x037~[\xfd\xdaX\xcf\x94\xc8\xaae\x14\xd2"gK\x13 \xef\xf7\xf2\xdc\x923D.\x16<C\x7fN\xe4\xc17\xb3K;9\x99\xf8\\\x8d\x02\x95\xf5\xe8\xa0)n\xeb\x85\x05\xe6\xddM\'\xbcl\xe9\x14z!\x04\x083\xbdT\xc0reAY\xa2A:L\x95J#\x80\x7f<\xd8c\xd7\xc6?\x1a\xdb\xc2H\r\xe3\xcdCY\xca2\xc7i\xa9y\xc3#\x16\xc7+\xb8\xa8\x8c\xfe\x0c\xba\xf6d\xc2sZ\x8f/\xce66\x18\xd6\xd0\xda\xf2\xa1f\x16\xde\x8be\xdd\x077\xf7\xaeD\r\xe7\x14\x07'
+
+
+apps.bank.OpenSession
+       ClientNonce         15291143942586006617
+       Login               wbai3
+       PasswordHash        b'^\xf0\xfa\x87\xd0\xf3\xd5\x08\xc5\xce\x8f\x91\x97\xa1L%r\xb3\xfd\xb8\xcd -\x19\xb3b\xff\xbd\xf6\x958\xb5'
+
+
+apps.bank.SessionOpen
+       ClientNonce         15291143942586006617
+       ServerNonce         5165411457400437428
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         15291143942586006617
+       ServerNonce         5165411457400437428
+       RequestId           3347322416380993274
+       Account             wbai3_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         15291143942586006617
+       ServerNonce         5165411457400437428
+       RequestId           3347322416380993274
+
+
+apps.bank.TransferRequest
+       ClientNonce         15291143942586006617
+       ServerNonce         5165411457400437428
+       RequestId           7431354093930183014
+       DstAccount          sabdous1_account
+       Amount              10
+       Memo                b4ef8ca0-e7b0-11e9-ad0b-000c29af344f
+
+
+apps.bank.Receipt
+       ClientNonce         15291143942586006617
+       ServerNonce         5165411457400437428
+       RequestId           7431354093930183014
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xbeX\x13\x00\x00\x00_LedgerLine__numberq\x04K\xbfX\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\r\x00\x00\x00wbai3_accountq\x08]q\t(K\x00J\xf6\xff\xff\xffK\x00eX\x10\x00\x00\x00sabdous1_accountq\n]q\x0b(M\x10\x04K\nM\x1a\x04euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 16:42:55 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX$\x00\x00\x00b4ef8ca0-e7b0-11e9-ad0b-000c29af344fq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+       ReceiptSignature    b'\x8e"?\x8bN\xce\xbe\x8c8\x1d\xa2\nU\x1e\xcfd\xf4\xfc\x9ay\xf5\xb8{3\xb7\xe1\x1a\xf2\x0cO\xa8\x1b\x86\xe1^+\xf8\xa3\x129\x03"Zkd\x0f\x96t\\\xc2\xf2E\xaa\x15\xf4\xaep\xd6)v/\xe0C\xf4A8\xe37\x9c\xd4\x16\xe3}\xd4\xa3\xd1\xd8\x83\xad+\x85b\xf2\x08\xb0g \x0b\x0cQ\xe0\xa1\ns\xfa0\xd7\x07\x0fHc\xc5Lrrx\x0c%/\xa3\xe2\xd1\xaf\x1d\xd6\xa7\xbfW\x7fu\xd4^\xe7-\xb1>6\xd3\x1b\x13\xac\x06y\xe8K\x82\xd9\x97\xd1o\x0c\xbd*.\x97\xe1\xd5>\xb4\xafl\xfb\x97\x89G\x97B\x1d\x8e\xea\xa2S4\xe8\x8fFmz\xdbr\x88\xb3\xf1\x8a\x89\x90\xc0\xa0\xa0(t\x0e\x1eNi\x81\xd3\x82=\x0c\xf4\x9e^}&\xb9o\xc0^P\x16\r\x9cB}\x1cy0E\x18\x00B\xd3\xfe\xfeT\xd8\x18L\x0eo\x89\x0e\xde\xfcF\xb9U\xbaD\xce7\x9d<\xf8\xc3\t\x180\xb5\x1c\x19\x1f\x82\x1etz\xa5\x81_\x92\xd7gR\x8an'
+
+
+apps.bank.OpenSession
+       ClientNonce         11303276502932212067
+       Login               yyang179
+       PasswordHash        b'g#\xc2K\x93\x13Aq\xd9C\x0c\x02[\xb1\xfcj\xb0i\xff\x96\xf8\x06\x044\x1b\x8e\x03\xbb\xca+\x1e\x01'
+
+
+apps.bank.OpenSession
+       ClientNonce         9759147006765355381
+       Login               yyang179
+       PasswordHash        b'g#\xc2K\x93\x13Aq\xd9C\x0c\x02[\xb1\xfcj\xb0i\xff\x96\xf8\x06\x044\x1b\x8e\x03\xbb\xca+\x1e\x01'
+
+
+apps.bank.SessionOpen
+       ClientNonce         9759147006765355381
+       ServerNonce         8014355149429337677
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         9759147006765355381
+       ServerNonce         8014355149429337677
+       RequestId           877187839711530087
+       Account             yyang179_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         9759147006765355381
+       ServerNonce         8014355149429337677
+       RequestId           877187839711530087
+
+
+apps.bank.TransferRequest
+       ClientNonce         9759147006765355381
+       ServerNonce         8014355149429337677
+       RequestId           8825194260307088261
+       DstAccount          ymao22_account
+       Amount              5
+       Memo                9821389123
+
+
+apps.bank.Receipt
+       ClientNonce         9759147006765355381
+       ServerNonce         8014355149429337677
+       RequestId           8825194260307088261
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xbfX\x13\x00\x00\x00_LedgerLine__numberq\x04K\xc0X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x0e\x00\x00\x00ymao22_accountq\x08]q\t(K\x00K\x05K\x05eX\x10\x00\x00\x00yyang179_accountq\n]q\x0b(K\x00J\xfb\xff\xff\xffK\x00euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 16:44:25 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX\n\x00\x00\x009821389123q\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+       ReceiptSignature    b'\xa9qq\xb6(M\x91$"\xe7"\xe2[\x13&$\x06\x9b\x12\\y\x1f\xce\x06\x1b\xaa\xec\x11Vq\x99\x1c\x86\xc3\xda\xee\xa8\x93\x83%\x89\xbf+\xb4\xf4I\xf8)vwf\xa9\x82\xfa\x82x4\xd7\xe5\xd6k\xfd\r\xaf\xcc\xd2\x02\xc5\xd3\x17\xae\xce:\xe5A\xc4\x0fY\x12\xca\xbe%?3N3\xd1wco\x95\xe7\xac\xb6[\x81BST\x89\xfe3[\xd5+b\xfa\x1esV\xa7\xf1\xe7\xcd\x17\xb7\xb1\xe1w\xd4,\x9c\x00ky\x8c#\xe0*\x055\n\xbf\x05\xa7\xe5b\xb5k\xbb|Y:\t\x1dH\xd7\x9c\xcd]+\x0b\xc2\xceX\x17;\x88hj\xb3\xec$*\x84\xa7\xec\xae\xf3]\xc0\x0b\xcc"\x0c\x1a!Yk\xa6D~\xe6\xb4*\x16\xa2S]&\x073qY1\xadwy\xfa\xcfa\x030\xab\xc1n\x159\xcdc\xa3\xde\xf1\xb9\xf4\xcc\xbe\xee\xeb\x0cH\xb1\x8a\x07;\xcdkS \x03\x88E\xf3m\xf8S\x80\xa8(\xd2\x9a\xc2y\xa4\x91\x94Mw\xf6v\xf5\x9b\x8c\x1f\x81\xed'
+
+
+apps.bank.OpenSession
+       ClientNonce         17470158436438145892
+       Login               yyang179
+       PasswordHash        b'g#\xc2K\x93\x13Aq\xd9C\x0c\x02[\xb1\xfcj\xb0i\xff\x96\xf8\x06\x044\x1b\x8e\x03\xbb\xca+\x1e\x01'
+
+
+apps.bank.SessionOpen
+       ClientNonce         17470158436438145892
+       ServerNonce         4083167298900454615
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         17470158436438145892
+       ServerNonce         4083167298900454615
+       RequestId           2929990395422070049
+       Account             yyang179_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         17470158436438145892
+       ServerNonce         4083167298900454615
+       RequestId           2929990395422070049
+
+
+apps.bank.TransferRequest
+       ClientNonce         17470158436438145892
+       ServerNonce         4083167298900454615
+       RequestId           22784081070288794
+       DstAccount          ymao22_account
+       Amount              5
+       Memo                9821389123
+
+
+apps.bank.Receipt
+       ClientNonce         17470158436438145892
+       ServerNonce         4083167298900454615
+       RequestId           22784081070288794
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xc0X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xc1X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x0e\x00\x00\x00ymao22_accountq\x08]q\t(K\x05K\x05K\neX\x10\x00\x00\x00yyang179_accountq\n]q\x0b(K\x00J\xfb\xff\xff\xffK\x00euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 16:49:47 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX\n\x00\x00\x009821389123q\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+       ReceiptSignature    b"\xban\xcc\x0e:>\x06\xa80\xf8O\x11\xb0}\x9eTa\xec\xcb\xf3[\xc5\xfb\xa3\xf0\xfb\xabA\xcc\x9b\xfb\xc1\xfet\xbap\x15)^\x10\x887@\xf1\x88\xbe\xabs5f\xed\x94\xdc+O\xb4\xca\xcch\x1f\xd0s\x1bL\xbe&\xcf{3\x92\x96M\xacE\x8d\xcd\x07{\xdb\xcaU<t^[\x17RI\xce\xc1\x7f\xf1j\xe9\xb0\xaa\xa9)\xe5\xf7Ahk\xd8v\xca\xe4\xec\xd5w\xcf\xcc\x15wC\xecM\xedq\xf4\xfe\xa2\x89r\x91\xf1\xdbb\xdd#(j\xcaXnG\xa3\x96R\xff2B\x91@v\x02\xbe\x8c\xc8\\\x92\xf9\xddq\t\xf6T\xa1\xe2\xe5M \xde\x90\x8bA\xa7A\xa1N\x85\xa8[\x89\x8cbDJg|\xdf1{M\x00\x07\xe1V2a*\xd1\xd6<\xf6/\x9ds\xaa\xed\x92)\xba\x88z\x04A\x8f\xda\xf0O\x13\xf1\x161\xba\xbe{\xb7\xb8X\x92W`6\xb0A\xc3\xf7'\xe6\xa1\xd9\x1a?\x00:\xd0\xd6#\x9e\xea\x8d\xfc\x04\xfa\x83\x0f\xf3\xccQ\xb5^\xb9\x8c\xc0"
+
+
+apps.bank.OpenSession
+       ClientNonce         13285325799524036968
+       Login               wbai3
+       PasswordHash        b'^\xf0\xfa\x87\xd0\xf3\xd5\x08\xc5\xce\x8f\x91\x97\xa1L%r\xb3\xfd\xb8\xcd -\x19\xb3b\xff\xbd\xf6\x958\xb5'
+
+
+apps.bank.SessionOpen
+       ClientNonce         13285325799524036968
+       ServerNonce         10599759079964294710
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         13285325799524036968
+       ServerNonce         10599759079964294710
+       RequestId           9050183507253564053
+       Account             wbai3_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         13285325799524036968
+       ServerNonce         10599759079964294710
+       RequestId           9050183507253564053
+
+
+apps.bank.TransferRequest
+       ClientNonce         13285325799524036968
+       ServerNonce         10599759079964294710
+       RequestId           9379855604291586852
+       DstAccount          sabdous1_account
+       Amount              10
+       Memo                e9869bce-e7b1-11e9-ad0b-000c29af344f
+
+
+apps.bank.Receipt
+       ClientNonce         13285325799524036968
+       ServerNonce         10599759079964294710
+       RequestId           9379855604291586852
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xc1X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xc2X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\r\x00\x00\x00wbai3_accountq\x08]q\t(K\x00J\xf6\xff\xff\xffK\x00eX\x10\x00\x00\x00sabdous1_accountq\n]q\x0b(M\x1a\x04K\nM$\x04euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 16:51:33 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX$\x00\x00\x00e9869bce-e7b1-11e9-ad0b-000c29af344fq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+       ReceiptSignature    b"\x138\xc1=\xa6\xfc[\xae\xfb\x8bb\x97A\x0e\xfc\x01fV\x80I\xc9\xce\xea1r2\xab\xcc\xa5\xfb\x19\x93\x9d\xb7\xdc\xf3\xef_\xcb\x07>w\x19\xb8j\xa0s\x8e\xd0\xd8G\xfcz\x11\xca\xa9\xeb\xb8\x11\x98\x99\xcc\x04\xf9\xe4$\xbd\x0b\xd3\\{V\xdd\xc8\x9e\x14q&\xf2\xc1\xa0r\x0c\x95o\xe9\x14\xbb\xf4\xc0\x80m\t{Q\x05:[\xba\x87<\xd9Y\xccV\xb9c]\x1f\xe9,\xbb\x9f\xed\xd9L(\xa6Za\xfbV\x02T\xcc\x84#\x8e\xbek\xd5\xff\x7f\x8e\x15\xfc\xbef\x1c\xf1\x82-A\xbe\x06\x9d\x9aO\x08a\x89|/\\L\x10q\x1bE\xefv\xd6ut>\xd4\xc1u\xe2\xc6*\xf5T\xf0T\x92'\x84\xb5\x18\xf5\xc6\x08E\t\x95\xb4\xba\xa9w\xc8^\xfcf%\xe6Zmmq\xb0\xa0\x06{\x01\xbf;8\xe2\xaa8h\xc6|\xac\xcb%Xvm\xddB\xcd\x8f\x10T\xfb\x96\x10\x04O\x12A\x115\xa1e\x17@t\x1b\xbd%\xc9\xf0\x9a\xde\xf1\xe50+\xdfg\x0bk\x01"
+
+
+apps.bank.OpenSession
+       ClientNonce         15908218295536006488
+       Login               yyang179
+       PasswordHash        b'g#\xc2K\x93\x13Aq\xd9C\x0c\x02[\xb1\xfcj\xb0i\xff\x96\xf8\x06\x044\x1b\x8e\x03\xbb\xca+\x1e\x01'
+
+
+apps.bank.SessionOpen
+       ClientNonce         15908218295536006488
+       ServerNonce         15867630326809156286
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         15908218295536006488
+       ServerNonce         15867630326809156286
+       RequestId           16352576840917564391
+       Account             yyang179_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         15908218295536006488
+       ServerNonce         15867630326809156286
+       RequestId           16352576840917564391
+
+
+apps.bank.TransferRequest
+       ClientNonce         15908218295536006488
+       ServerNonce         15867630326809156286
+       RequestId           3505342276627468825
+       DstAccount          ymao22_account
+       Amount              5
+       Memo                9821389123
+
+
+apps.bank.Receipt
+       ClientNonce         15908218295536006488
+       ServerNonce         15867630326809156286
+       RequestId           3505342276627468825
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xc2X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xc3X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x0e\x00\x00\x00ymao22_accountq\x08]q\t(K\nK\x05K\x0feX\x10\x00\x00\x00yyang179_accountq\n]q\x0b(K\x00J\xfb\xff\xff\xffK\x00euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 16:51:33 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX\n\x00\x00\x009821389123q\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+       ReceiptSignature    b'\t3\xbe\xa4u$\xa5\xc4\x8a\xa2"\x10\xaa\rL\x86O6Z7\xf3\x9d\n\x04(\x86\xc3\xbc\x9c?\xd2\xdeo\x1e\xd4muJ\x92\xf3\xf7\xa8g\xd2ms\x8a\\K?\xa0/\x86"\x81\xfa\xaa\xffZ\x8e\x83R\xce\xa4\xa5\xc8)qYO\x01\xb8\xe7\x8e\xd9:\xad\xb1O%f\xc9\xb8c{[h\xc2\x9c\xa8\xb3h\xc7\xd89\x08-\x84\x1bF\xe8\xa3\xe8\xd9\x1awI\xe1\xed\x96\xe03I\x8ek\x15\xbf\x17\xe2\x87b\x8c\xb6\xd6,2\xc0M\xc1\xa2V\xe7\xa5{y^=\xca5\xf0\xde\xd0\x1b\xe2\xeb\xdc\x80\xecx\x95\x1874P\xd6B\xe4tY #=\x12\x19\xde\x90\x9dG\xcenZ\xf4 #/: \xbaV\x96\xe9\xa8\x15\xf3\xf7\xea\xaf\xcb\xb1\x98=.\xc5H\x1a\xcbM\xd7{\xefM\xa4\xf7C\x02=\x82\x96\xb2\x913\x0e0\x95V\xef\x8e\xf7@\x1b"\x1cK_D\x91\x8c\xea\x86R\xb2\xcc\xe9\xa3\xa4\xca"\x1fh\xf67D\xf1\x8f\xe6\xc6_\x1c\x0f\xc5\x14\x86\x02\x1f\x1e\x99'
+
+
+apps.bank.OpenSession
+       ClientNonce         17590598208005387089
+       Login               wbai3
+       PasswordHash        b'^\xf0\xfa\x87\xd0\xf3\xd5\x08\xc5\xce\x8f\x91\x97\xa1L%r\xb3\xfd\xb8\xcd -\x19\xb3b\xff\xbd\xf6\x958\xb5'
+
+
+apps.bank.SessionOpen
+       ClientNonce         17590598208005387089
+       ServerNonce         7932582147528756960
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         17590598208005387089
+       ServerNonce         7932582147528756960
+       RequestId           14193927831687758001
+       Account             wbai3_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         17590598208005387089
+       ServerNonce         7932582147528756960
+       RequestId           14193927831687758001
+
+
+apps.bank.TransferRequest
+       ClientNonce         17590598208005387089
+       ServerNonce         7932582147528756960
+       RequestId           11292119986476312634
+       DstAccount          sabdous1_account
+       Amount              10
+       Memo                fc2caf7a-e7b1-11e9-ad0b-000c29af344f
+
+
+apps.bank.Receipt
+       ClientNonce         17590598208005387089
+       ServerNonce         7932582147528756960
+       RequestId           11292119986476312634
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xc3X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xc4X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\r\x00\x00\x00wbai3_accountq\x08]q\t(K\x00J\xf6\xff\xff\xffK\x00eX\x10\x00\x00\x00sabdous1_accountq\n]q\x0b(M$\x04K\nM.\x04euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 16:52:04 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX$\x00\x00\x00fc2caf7a-e7b1-11e9-ad0b-000c29af344fq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+       ReceiptSignature    b"\xc2\x90\x02G\x14x\x0cev\xe7j8\x92\xbb[\x082nJ,\x1f\x96\x94\xdc#\xfa\x91\xa5\xbd\x81\x15C\x00\xeeM\x03\x11\x1e\xee0\xb4\xe5\xb4\x908\xd5 \xc2\xeb;\xb1\xd6\xbe\x19\x14\xcc\x96*\xf9\xa8\xc2hpS\x0c**\x04p\xf7\x85\xc0\x00\xc6v\x04L\x8cBw\x91\xbbLT\xd8OWod\x00\xda\xa6\xa9\x8eD\x83\xec\x0e\xdb\xf6U\xa5u\x93\xec\xb5\xc0\x02;\xe4\x10{\xbb\xed\xc0\x83\xf4R\xca!y\xa7sBU\xa3\xfeJb\xe7\xf9\xcc\xd6_hF\x8bu\x0f\xbas\xces\xa0\xd5\tz\xf7b\x0b\xd5!\x18\xeb\x90\x03Wdw\xc5\x1c\xffu\xa7>mjq\xab\xc6\x15\x7f\x15\x0b1g;#\xe6Tf\x95\x9eC\xde\xc2\x14\xe6-\xf9\xed$M\x17N\xc9\xd7K&dP.;\x9c\x94?\xba(g\xc9W\x80^\xebb.\xba'\xf7\x86.\x0f\xbb\xc9\x94\x19Q\xd6\x13|\n\x89V\xc85Qe\xa2\xa5j\xe6\xc12\xec\x1f\xd4\xc0\xe3\x1dJ\xd1x)m\xaa\x88"
+
+
+apps.bank.OpenSession
+       ClientNonce         13747917852787397565
+       Login               yyang179
+       PasswordHash        b'g#\xc2K\x93\x13Aq\xd9C\x0c\x02[\xb1\xfcj\xb0i\xff\x96\xf8\x06\x044\x1b\x8e\x03\xbb\xca+\x1e\x01'
+
+
+apps.bank.SessionOpen
+       ClientNonce         13747917852787397565
+       ServerNonce         7474824144711898051
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         13747917852787397565
+       ServerNonce         7474824144711898051
+       RequestId           6771520569775486801
+       Account             yyang179_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         13747917852787397565
+       ServerNonce         7474824144711898051
+       RequestId           6771520569775486801
+
+
+apps.bank.TransferRequest
+       ClientNonce         13747917852787397565
+       ServerNonce         7474824144711898051
+       RequestId           11600614664151291570
+       DstAccount          sabdous1_account
+       Amount              10
+       Memo                a1e531ee-e7b2-11e9-ad0b-000c29af344f
+
+
+apps.bank.Receipt
+       ClientNonce         13747917852787397565
+       ServerNonce         7474824144711898051
+       RequestId           11600614664151291570
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xc4X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xc5X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x10\x00\x00\x00sabdous1_accountq\x08]q\t(M.\x04K\nM8\x04eX\x10\x00\x00\x00yyang179_accountq\n]q\x0b(K\x00J\xf6\xff\xff\xffK\x00euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 16:56:45 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX$\x00\x00\x00a1e531ee-e7b2-11e9-ad0b-000c29af344fq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+       ReceiptSignature    b'\x1c!\xc3\x9d{\xe0\x1b\x85\x98\'\xcc\x1f\xc6\x05P\xfca\xca\xeb+%G\xfe@S\xfd\x88^\xd9\x8e?\x1f=\x8f\x8b\x11y\xb5\xfdh\xf9\xc2\xe9e\x90\x1crmm\xff\xbf.\xfd\x8bz\xb5}\xcd_@zC\xaa\x80NJ\xc4\xd6\xea\x838\xb2\xea\xf9\xdd\xde\x90\xe4\xd9=^c\x80+\x80a\xfc\x84g\nJ\xcc\x85*\xa9\x07\xbaS-\x87\xdeu\xee\x9e\xb3@%\xe6\xc1\xae\xbe\x9a=\xd2r\xe4\x035\xd7Yn5\xb2\\Q7\xe5\x14\xac\xb6\x95\xf0ZE\xf8%\x9eU\x0c\xfb\'\'\xe9\x02\xf7[\x1c\xc1\xc01\x82\xfd}\x0e\xb2t\x9e\xf2\xe1@\x85\xcfy5QL\x1d\xe9y\xfa\x9eY\xd5x\xa7\xa1"\xae\xd2\x9eM\xd5?\xf9\xa3e\xf5\x1e\xee\x9a\xa9\r\xe2\xb2\xa0\xd2\x0cm\x8c\x1e\xe9*\x97o\x02V\x1c\xe1\\\xe1\x92\x8b\xd4\x89r1\xe5\xc2\x12\x04\xcb\x91\xef\xdb\xaa\x96g\x037\x84\x0c!\x1e{\xef\xa0\xc3\x9cg$\xb6\xcc\xe5\x14\xb87\xba\xc2\x13\x04\xe7\xb97%\x05\xe4'
+
+
+apps.bank.OpenSession
+       ClientNonce         15062283320599095030
+       Login               yyang179
+       PasswordHash        b'\xb2\xa4\x1c%c7\x80\xc6\xb9$n\xd9\x1b\xd0\x10\xfe\xf7\x185\x9c\x10\xe7\xcf\xc7YH\xb1\xd3\xb1U-='
+
+
+apps.bank.LoginFailure
+       ClientNonce         15062283320599095030
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         15005384546039820635
+       Login               bhui2
+       PasswordHash        b'\x0fq\x8b\xb5\tfc9v\xd1\xd3\xad\x94\xd9\xdbb\xc6x\xaa7v\xf0\x10\xee\xa1\xfd\xa3=\xad\x12\t\xba'
+
+
+apps.bank.LoginFailure
+       ClientNonce         15005384546039820635
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         17815045811841469048
+       Login               bhui2
+       PasswordHash        b'k@\x88\x8d\x9e\xbf\xbbU\x04\xf6+\x05\x96I\xcd\x90V\xa4^\xd82\x88\xc0\xfb\xa2\xef\xfc\x02\x03u\x8a@'
+
+
+apps.bank.SessionOpen
+       ClientNonce         17815045811841469048
+       ServerNonce         2218319734199042692
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         17815045811841469048
+       ServerNonce         2218319734199042692
+       RequestId           2756517067230864105
+       Account             bhui2_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         17815045811841469048
+       ServerNonce         2218319734199042692
+       RequestId           2756517067230864105
+
+
+apps.bank.TransferRequest
+       ClientNonce         17815045811841469048
+       ServerNonce         2218319734199042692
+       RequestId           13895164535082212558
+       DstAccount          sabdous1_account
+       Amount              10
+       Memo                39b13c84-e7b3-11e9-ad0b-000c29af344f
+
+
+apps.bank.Receipt
+       ClientNonce         17815045811841469048
+       ServerNonce         2218319734199042692
+       RequestId           13895164535082212558
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xc5X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xc6X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\x10\x00\x00\x00sabdous1_accountq\x08]q\t(M8\x04K\nMB\x04eX\r\x00\x00\x00bhui2_accountq\n]q\x0b(K\x00J\xf6\xff\xff\xffK\x00euX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 17:01:00 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX$\x00\x00\x0039b13c84-e7b3-11e9-ad0b-000c29af344fq\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+       ReceiptSignature    b'm]jK\x8b*B\x84s\x1a\x8fY\xd0{i2r$\x06\x05\x02I\xbeO.\xb0\xb4\x95,\x96<-|L\xaa\x9e\xa1\x9d\x0e<\x18(\x0b<e\x1a\xa4A9\xe1\xe7\xd7s\xceh"\xaf\xb4}/\xd95>w\xaa0\x92\xcd\xa2\xf4\x92\x0f\x92gaZZ\xd6\xdd\xcb\xc7\xbb\xbe\xe0\xa3\xe3\xf5\xdcjf\xbd;k\x1e\xccW\x11}\xacm@\x0e\x81D*V\xc9\xc6l_\x9b\x8e\x95i2\xe5QjOK8\x11\x99\x7f$0j\xce\x16\xdeA\xd3\xcaE\x87;-\xdc\x1a\r\xab%\x10\xddz\x06\xcb\x95\xda\x08\x8f\xe8\xc6\xfcJ\x8c\xa4\xa2p\xf5]\x01G\xf1\xe1\x8a\x02/>\xd8\xaa\x9fn\xbb\xba\xa4o\xdc+R\x8a\r\x0f\xe7x\xf2B\x8c\x96@\xd6\x0eX\r:\x81\xba\x9f\xdc\xec\x10\x86q\xa0\x01:O\xbff,{\xdb\xa6\x9fih<\xfb\x96\x9f\x10\x8d\x06\x85\xf4\t~\xb9\xf5m\xa7\xfb\x91\xd9\xe7\xbb\xf4\x03c\x81\x18H\xc4H6\xdf\xc6O\x1bSo\x7f\xe6U\xf2s'
+
+
+apps.bank.OpenSession
+       ClientNonce         11940998513443807551
+       Login               bhui2
+       PasswordHash        b'.\xbb\xf9J\x91\xa2\xae\x92\xd1\ro\xc6pAN)[\xef\n\x9a\x0e\xaa\xc9`\x08\xfc\x0bf\xdfv\xac+'
+
+
+apps.bank.LoginFailure
+       ClientNonce         11940998513443807551
+       ErrorMessage        Invalid Login. User does not exist or password is wrong
+
+
+apps.bank.OpenSession
+       ClientNonce         12292629854004530585
+       Login               bhui2
+       PasswordHash        b'k@\x88\x8d\x9e\xbf\xbbU\x04\xf6+\x05\x96I\xcd\x90V\xa4^\xd82\x88\xc0\xfb\xa2\xef\xfc\x02\x03u\x8a@'
+
+
+apps.bank.SessionOpen
+       ClientNonce         12292629854004530585
+       ServerNonce         16092089329732267866
+       Account             
+
+
+apps.bank.SwitchAccount
+       ClientNonce         12292629854004530585
+       ServerNonce         16092089329732267866
+       RequestId           11093477329547386511
+       Account             bhui2_account
+
+
+apps.bank.RequestSucceeded
+       ClientNonce         12292629854004530585
+       ServerNonce         16092089329732267866
+       RequestId           11093477329547386511
+
+
+apps.bank.TransferRequest
+       ClientNonce         12292629854004530585
+       ServerNonce         16092089329732267866
+       RequestId           2690466189427781779
+       DstAccount          ymao22_account
+       Amount              15
+       Memo                9821389123
+
+
+apps.bank.Receipt
+       ClientNonce         12292629854004530585
+       ServerNonce         16092089329732267866
+       RequestId           2690466189427781779
+       Receipt             b'\x80\x03cBankCore\nLedgerLine\nq\x00)\x81q\x01}q\x02(X\x17\x00\x00\x00_LedgerLine__prevNumberq\x03K\xc6X\x13\x00\x00\x00_LedgerLine__numberq\x04K\xc7X\x15\x00\x00\x00_LedgerLine__accountsq\x05ccollections\nOrderedDict\nq\x06)Rq\x07(X\r\x00\x00\x00bhui2_accountq\x08]q\t(K\x00J\xf1\xff\xff\xffK\x00eX\x0e\x00\x00\x00ymao22_accountq\n]q\x0b(K\x0fK\x0fK\x1eeuX\x15\x00\x00\x00_LedgerLine__completeq\x0c\x88X\x1c\x00\x00\x00_LedgerLine__transactionDateq\rX\x18\x00\x00\x00Sat Oct  5 17:03:26 2019q\x0eX\x1c\x00\x00\x00_LedgerLine__transactionMemoq\x0fX\n\x00\x00\x009821389123q\x10X \x00\x00\x00_LedgerLine__transactionAccountsq\x11cbuiltins\nset\nq\x12]q\x13(h\x08h\ne\x85q\x14Rq\x15ub.'
+       ReceiptSignature    b"\x97\xec\x194\xd6\xf4\x13 o\xd6\xe2\x93\xf9\x1f\xc0\xc7\xc4\x87\xd8\xdd\xbb\x0c\x854\xf75\xfd\x96\xdf\x1a\xc7\xe0\xd5\x1d\xf8\x85\x97\\K\xcb\x0f\x13\xeaN\x96@\xf5(\xdc=\xde\xf9\xbe\x8c \xabv\xec\x87\xdcp\xdbJ\x8d\x86\xe8\x92\xb3;F\xea~\x02,\x96\xca\xa3\xed\xc9\xe8\x1d\x81\xf6\x95\xde\x0b\x10\xc43S9e\x99\xdc\xc1\xf3\xa8\xba\x80\x1f\xa8G3\x81\x15B\xea\xf4\x88_\xb2\xee;\rl\x90%\x06\xd5\x9d$\x11\xc0Ok\xf9\xa6\x9c\xbcG\x03`\xf4\xec\x03\xb3\x00@iW#\x87\x8f}\x7fK\xf4*O\x1b\x97\x81x\xf5s')\xd0\xb2\xb7\x03\xcc\x80\x8d\xb9nF\x16j\xd2\x9fx_\xf7\x85\xcc\xdb\xb9\xd9\xe0\x06\x15\xee\x03\xca\xc2:g\xe1MD\x1f\x9c\xc7^\xfdr\xd0\x18\xab\xa2Ls>p\xa8\xd7W\xb9F\xd1\xb83a)x]FOuz<\x1b\xb6\xf0`)!\x9a*N\x96\xbc\x14\x84\x04\x92*S\xb8\xf3\xe9F\x96u~n1\x1e\t4\xc5\xc9\xa6i\xc3"
+
+

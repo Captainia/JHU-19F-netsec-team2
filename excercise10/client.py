@@ -8,8 +8,8 @@ from class_packet import *
 # from playground.common.logging import EnablePresetLogging, PRESET_DEBUG
 # EnablePresetLogging(PRESET_DEBUG)
 
-IPADDR = "20194.0.0.19000"
-PORT = 19008
+IPADDR = "20191.2.57.98"
+PORT = 2222
 
 
 def getFirstPkt():
@@ -20,7 +20,6 @@ def getFirstPkt():
 # TODO: add testid
 def getCheckResPkt():
     return AutogradeResultRequest(test_id="07a2fccd724a998b1c59f11879da5f0047a25e28ad536e5c1ad0bb8e45078526")
-
 
 class ClientProtocol(asyncio.Protocol):
     def __init__(self, loop, firstPkt=None):
@@ -49,6 +48,8 @@ def main(args):
         firstPkt = getCheckResPkt() if args[0] == "check" else getFirstPkt()
     else:
         firstPkt = getFirstPkt()
+        # NOTE: just removed the first pkt func
+    firstPkt = create_game_init_packet("test")
     coro = playground.create_connection(lambda: ClientProtocol(loop=loop, firstPkt=firstPkt),
                                         IPADDR, PORT)  # for E5
     loop.run_until_complete(coro)

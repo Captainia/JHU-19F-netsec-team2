@@ -3,14 +3,19 @@ import playground
 import time
 import sys
 from cmdHandler import ServerCmdHandler, printx
+from threading import Timer
+
+
 # from playground.common.logging import EnablePresetLogging, PRESET_VERBOSE
 # EnablePresetLogging(PRESET_VERBOSE)
 
-PORT_NUM = 1107
+PORT_NUM = 2222
+timer = Timer()
 
 
 class ServerProtocol(asyncio.Protocol):
     def connection_made(self, transport):
+        timer = Timer()
         printx('Connection made')
         self.transport = transport  
         self.cmdHandler = ServerCmdHandler(transport)
@@ -26,7 +31,7 @@ class ServerProtocol(asyncio.Protocol):
 
     def data_received(self, data):
         self.cmdHandler.serverRecvData(data)
-
+    
 
 def main(args):
     loop = asyncio.get_event_loop()
