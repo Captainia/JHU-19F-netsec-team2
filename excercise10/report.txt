@@ -1,0 +1,22 @@
+Team 2
+tgao11
+
+Escape Room Added Features:
+  tgao11: Red button that can be pressed repeatedly. First time it is pressed, the room time decrements by 2 when the time advances. The player is informed of this. Second time it is pressed, the room time decrement rate goes to 5 and the player is informed of it. The third time it is pressed, the room time decrement increases to 10, the player is informed, and the door unlocks, and the player hears a click. The point of this button is that it gives the player an easy way to escape the room but it involves hitting the button 3 times, and the first two times the button is hit, a negative effect happens to dissuade the player. The player is not directly told that the door is unlocked, only that they hear a click. They will have limited tries to open the door because the time decrement would be at 10 at that time, and the key flying around also triggers the time decrement.
+  
+
+
+Password Hashes:
+Team      Username
+Team 1:   sabdous1      \\xe5\\xd9\\x9c\\xcd\\xcc\\xc7D,\\x90\\xca1\\xeb\\x0fg_\\xcc]`b\\xe2@@\\x95\\x13"\\xa0\\xe8V#\\xa1\\xd3\\xbb
+Team 3:   yyang179      \\xb2\\xa4\\x1c%c7\\x80\\xc6\\xb9$n\\xd9\\x1b\\xd0\\x10\\xfe\\xf7\\x185\\x9c\\x10\\xe7\\xcf\\xc7YH\\xb1\\xd3\\xb1U-=
+Team 4:   tfeng7        
+\\xed\\x03\\xb4\\x81?G\\x9c\\xfc\\xac\\xa7\\xe2\\x8ao\\xd7\\t\\x90\\x13\\x17a\\xd9`\\xd3\\xa4\\xfa\\xc7\\xf8\\x0e\\xca:8\\xca\\xc4
+Team 5:   wbai3
+^\\xf0\\xfa\\x87\\xd0\\xf3\\xd5\\x08\\xc5\\xce\\x8f\\x91\\x97\\xa1L%r\\xb3\\xfd\\xb8\\xcd
+Team 6:   szhou54
+\\tk\\xd5BE3\\x8b919b\\xc5\\xf9\\x9dI\\xf6\\xe0l\\x9e\\x8c\\x90\\t{\\x82\\x91y?k\\xb0\\xe9/\\x00
+Team 7:   Did not see their packets
+Team 8:   Did not see their packets
+Team 9:   jlee662
+\\x94\\x18\\x81\\x0f\\x90\\xa9\\x9a\\x7f\\xb8\\x94\\x94<\\xdc\\xd0\\x86\\xe3\\x85\\xa5\\xb4k\\xe6\\xe5\\xda",~U\\xf8D\\x08Ur
