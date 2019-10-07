@@ -4,7 +4,7 @@ tgao11
 Escape Room Added Features:
   tgao11: Red button that can be pressed repeatedly. First time it is pressed, the room time decrements by 2 when the time advances. The player is informed of this. Second time it is pressed, the room time decrement rate goes to 5 and the player is informed of it. The third time it is pressed, the room time decrement increases to 10, the player is informed, and the door unlocks, and the player hears a click. The point of this button is that it gives the player an easy way to escape the room but it involves hitting the button 3 times, and the first two times the button is hit, a negative effect happens to dissuade the player. The player is not directly told that the door is unlocked, only that they hear a click. They will have limited tries to open the door because the time decrement would be at 10 at that time, and the key flying around also triggers the time decrement.
   
-
+han11: A coded lock on the chest. Description of the cipher is in Morse Code: .-- .... .- - / - .. -- . / .. ... / .. - ..--.. (English: What time is it?), the code is local time (i.e. 10:51am -> 1051). The player has 5 chances to enter the right code, each time the code display decreases by 1, and looking at chest or entered a wrong code will display remaining times to try. If the chances reaches 0, the coded lock will explode and you die. The point of this coded lock is setting obstacle in the regular way of escaping, and in the mean time making dead more easily. This will guide the player to think is there a better way to escape (press redbutton 3 times, get the extra life).
 
 Password Hashes:
 Team      Username
